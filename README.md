@@ -19,6 +19,7 @@ Set vscode editor if you want to
     git config --global core.editor nvim or vim
     git config --global core.editor "code --wait"
     git config --global -e -> open editor to edit .gitconfig
+    git config --global credential.helper store
 
 Set vscode as a default diff tool
 
