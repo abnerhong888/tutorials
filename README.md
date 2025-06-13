@@ -13,6 +13,7 @@ Head is means in current branch
 
     git config --global user.name "Your Name"
     git config --global user.email "Your Email"
+    git config --global core.editor nvim or vim
 
 Set vscode editor if you want to
 
