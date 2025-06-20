@@ -24,11 +24,12 @@
 
 # obj dump
 ```bash
-    objdump -Slz a.out
+  objdump -Slz a.out
 ```
 
 
 # profiling
 ```bash
+  valgrind ...
   perf ...
 ```
