@@ -136,7 +136,7 @@ then you can edit .gitignore to ignore files or folders for git
 
     git reset --hard <ID> -> delete commit by ID
 
-    git clean -> clean untracked files
+    git clean -fd -> clean untracked files
 
 # . MarkDown Practice
 
