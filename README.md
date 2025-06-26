@@ -54,7 +54,7 @@
   perf ...
 ```
 
-# Linux不能删除，报错”Device or resource busy”
+# Linux不能删除， ”Device or resource busy”
 ```bash
   lsof |grep <filename>
   kill -9 <processid>
