@@ -53,3 +53,11 @@
   valgrind ...
   perf ...
 ```
+
+# Linux不能删除，报错”Device or resource busy”
+```bash
+  lsof |grep <filename>
+  kill -9 <processid>
+  ＃ java      32308    hadoop  201u      REG               0,23  1048576 57278542
+  ＃ /public/hadoop/name/current/.nfs00000000036a004e00000009 (iboss01:/public)
+```
