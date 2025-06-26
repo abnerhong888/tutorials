@@ -16,19 +16,28 @@
   # extract file
   tar -xvf <file name> -C <directory>
 ```
+
 # ar
 ```bash
   # list files in a
   ar t <name>.a
 ```
+
 # ld
 ```bash
   ld <name>.so
 ```
+
 # nm
 ```bash
   nm <name>.a
 ```
+
+# du
+```bash
+  du -hs <folder>
+```
+
 # code size
 ```bash
   size <.o, .so ...>
@@ -38,7 +47,6 @@
 ```bash
   objdump -Slz a.out
 ```
-
 
 # profiling
 ```bash
