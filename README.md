@@ -138,6 +138,8 @@ then you can edit .gitignore to ignore files or folders for git
 
     git clean -fd -> clean untracked files
 
+    git remote set-url origin <address>
+
 # . MarkDown Practice
 
 
