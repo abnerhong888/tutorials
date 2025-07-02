@@ -21,6 +21,10 @@
 ```bash
   # list files in a
   ar t <name>.a
+  # extract .a file
+  ar -x <file> --output <dir>
+  # archive together
+  ar rcs <name.a> *.o
 ```
 
 # ld
