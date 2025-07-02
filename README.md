@@ -58,6 +58,12 @@
   objdump -Slz a.out
 ```
 
+# obj copy
+```bash
+  # redefine symbol in static library
+  objcopy --redefine-sym calloc=callocflake file.a
+```
+
 # profiling
 ```bash
   valgrind ...
