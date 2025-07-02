@@ -23,8 +23,13 @@
   ar -t <name>.a
   # extract .a file
   ar -x <file> --output <dir>
-  # archive together
+  # archive together 1
   ar -rcs <name.a> *.o
+
+  # archive together 2, this can resolve Undefined symbol
+  ld -r -o libmerged.o *.o
+  ar -rcs <name.a> libmerged.o
+
 ```
 
 # ld
@@ -35,6 +40,7 @@
 # nm
 ```bash
   nm <name>.a
+  nm -s <name>.a
 ```
 
 # du
