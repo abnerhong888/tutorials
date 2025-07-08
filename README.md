@@ -55,7 +55,8 @@
 
 # obj dump
 ```bash
-  objdump -Slz a.out
+  objdump -Slz a.out > log.log
+objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
 ```
 
 # obj copy
