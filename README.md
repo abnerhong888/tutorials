@@ -56,7 +56,13 @@
 # obj dump
 ```bash
   objdump -Slz a.out > log.log
-objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
+  objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
+```
+
+# c++filt
+```bash
+  #demangle c++ function symbol
+  c++filt <symbol> 
 ```
 
 # obj copy
