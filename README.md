@@ -127,6 +127,7 @@ then you can edit .gitignore to ignore files or folders for git
     git checkout
     git checkout <ID>
     git checkout <branck name>
+    git checkout -b <branck name>
 
     git restore . -> undo all local changes
     git restore file.txt -> undo all modified file
@@ -139,6 +140,10 @@ then you can edit .gitignore to ignore files or folders for git
     git clean -fd -> clean untracked files
 
     git remote set-url origin <address>
+
+    git branch 
+    git branch -a
+    git push -u origin <branch name>
 
 # . MarkDown Practice
 
