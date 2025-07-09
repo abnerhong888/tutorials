@@ -102,11 +102,14 @@ then you can edit .gitignore to ignore files or folders for git
     git difftool
     git difftool --staged
 
-8. Git branch
+# 8. Git branch
 
 
     git branch <name> -> create new branch
     git checkout <branch name> -> switch between branch name
+    git branch 
+    git branch -a
+    git push -u origin <branch name>
 
 # . Others
 
@@ -141,9 +144,9 @@ then you can edit .gitignore to ignore files or folders for git
 
     git remote set-url origin <address>
 
-    git branch 
-    git branch -a
-    git push -u origin <branch name>
+    gitk <filename>
+    gitk origin/<branch name>
+    
 
 # . MarkDown Practice
 
