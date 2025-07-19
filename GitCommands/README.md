@@ -1,5 +1,5 @@
 This is a tutorial for Git command  
-Also for practicing markdown language :smile:
+Also for practicing markdown language 
 ===
 
 # 0. Git
@@ -10,224 +10,269 @@ Working directory -> Staged area -> .git directory
 Head is means in current branch
 
 # 1. Git Config Setting
-
-    git config --global user.name "Your Name"
-    git config --global user.email "Your Email"
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "Your Email"
+```
 
 Set vscode editor if you want to
-
-    git config --global core.editor nvim or vim
-    git config --global core.editor "code --wait"
-    git config --global -e -> open editor to edit .gitconfig
-    git config --global credential.helper store
+```bash
+git config --global core.editor nvim or vim
+git config --global core.editor "code --wait"
+git config --global -e -> open editor to edit .gitconfig
+git config --global credential.helper store
+```
 
 Set vscode as a default diff tool
-
-    git config --global diff.tool vscode
-    git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
-    **make sure command is right in .gitconfig**
-    git config --global -e
+```bash
+git config --global diff.tool vscode
+git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+**make sure command is right in .gitconfig**
+git config --global -e
+```
 
 Setting the end of line format, ex. windows is \r\n, mac is \n
-
-    git config --global core.autocrlf <value>  -> <value> windows: true, macOS: input
+```bash
+git config --global core.autocrlf <value>  -> <value> windows: true, macOS: input
+```
 
 Get more help
-
-    git config --help -> more detail
-    git config -h -> quick help
+```bash
+git config --help -> more detail
+git config -h -> quick help
+```
 
 # 2. Inintial a repository
 
 Type it in your working folder
-
-    git init
+```bash
+git init
+```
 
 # 3. File Add command
 
-    git add . -> add all in current folder
-    git add file1 file2
-    git add *.txt -> all file with txt extension
-
+```bash
+git add . -> add all in current folder
+git add file1 file2
+git add *.txt -> all file with txt extension
+```
 Delete file 
-    
-    rm file1 
-    git add file1 -> this operation will marked delete file
-    
-    or
+```bash
+rm file1 
+git add file1 -> this operation will marked delete file
 
-    git rm file1 file2.txt *.txt -> if do this you don't need to add file to update
-    
+or
+
+git rm file1 file2.txt *.txt -> if do this you don't need to add file to update
+```    
+
 If you uncautiously add foler you don't want to, you can remove it in staging
 
-    git rm --cached -r bin/ 
+```bash
+git rm --cached -r bin/ 
+```
 
 Move / Rename file
-
-     mv file1.txt main.cpp
-     git add file1.txt
-     git main.cpp
-
-     or 
-
-     git mv file1.txt main.cpp
+```bash
+git mv file1.txt main.cpp
+```
 # 4. Commit
 
-    git commit -m "your comment message"
-    git commit -> without -m "message" it will open editor or use shell to type your change message
-    git commit -a -> commit all modified file
-    git commit -am "your message"
+```bash
+git commit -m "your comment message"
+git commit -> without -m "message" it will open editor or use shell to type your change message
+git commit -a -> commit all modified file
+git commit -am "your message"
+```
 
 # 5. GitHub or XXX cloud server
 
-    git push origin main -> push up all to online server
-    git pull origin main -> pull down from online server
+```bash
+git push origin main -> push up all to online server
+git pull origin main -> pull down from online server
+```
 
 # 6. Git Ignore
 
-
 Create ignore file
-
-    echo "" > .gitignore
-    git add .gitignore -> add this file to stage area
+```bash
+echo "" > .gitignore
+git add .gitignore -> add this file to stage area
+```
 
 then you can edit .gitignore to ignore files or folders for git
 
-    logs\
-    main.log
-    *.log
-
+```bash
+logs\
+main.log
+*.log
+```
 # 7. Git diff tool
 
-    git difftool
-    git difftool --staged
+```bash
+git difftool
+git difftool --staged
+```
 
 # 8. Git branch
 
-
-    git branch <name> -> create new branch
-    git checkout <branch name> -> switch between branch name
-    git branch 
-    git branch -a
-    git push -u origin <branch name>
-
-# . Others
-
-    git status -> check status like you don't commit
-    git status -s -> short status
-    git ls-files -> list all files 
-
-    git diff
-    git diff --staged
-
-    git log 
-    git log --oneline --reverse
-
-    git show HEAD~1 -> show head and step back 1
-    git show HEAD~1:<filepath> -> <ID> is also work
-    git show <ID>
-
-    git checkout
-    git checkout <ID>
-    git checkout <branck name>
-    git checkout -b <branck name>
-
-    git restore . -> undo all local changes
-    git restore file.txt -> undo all modified file
-    git restore --source=<ID> file.txt -> restore specific file with commited 
-    git restore --source=HEAD~1 file.txt
-    git restore --staged file.txt -> restroe staged file to working file
-
-    git reset --hard <ID> -> delete commit by ID
-
-    git clean -fd -> clean untracked files
-
-    git remote set-url origin <address>
-
-    gitk <filename>
-    gitk origin/<branch name>
-    
-
-# . MarkDown Practice
-
-
-:warning: <span style="color:red">you can install chrome or edge extension for markdown</span>  
-`and then you can see the changes immediately by autoreload function`  
-
-Code section
-
-```cpp
-#include "stdio.h"
-#include "stdlib.h"
-
-int main(){
-    printf("Hello World\n");
-    return 0;
-}
+```bash
+git branch <name> -> create new branch
+git checkout <branch name> -> switch between branch name
+git branch 
+git branch -a
+git push -u origin <branch name>
+git branch -d <name>
 ```
 
-`short block`
+# 9. Others
 
-CheckBox
+## git status
+```bash
+git status -> check status like you don't commit
+git status -s -> short status
+```
 
-- [ ] uncheck
-- [x] check
+## git ls-files
+```bash
+git ls-files -> list all files 
+```
 
-Hyperlink
+## git diff
+```bash
+git diff
+git diff --staged
+```
 
-[連結名稱](https://google.com "游標顯示")  
-[GOOGLE](https://google.com "google site")  
+## git log
+```bash
+git log 
+git log --oneline --reverse
+```
 
-Eazy Hyperlink  
-<https://google.com>
+## git show
+```bash
+git show HEAD~1 -> show head and step back 1
+git show HEAD~1:<filepath> -> <ID> is also work
+git show <ID>
+```
+## git check
+```bash
+git checkout
+git checkout <ID>
+git checkout <branck name>
+git checkout -b <branck name>
+```
+## git restore
+```bash
+git restore . -> undo all local changes
+git restore file.txt -> undo all modified file
+git restore --source=<ID> file.txt -> restore specific file with commited 
+git restore --source=HEAD~1 file.txt
+git restore --staged file.txt -> restroe staged file to working file
+```
+## git reset
+```bash
+git reset --hard <ID> -> delete commit by ID
+git clean -fd -> clean untracked files
+```
+## git remote
+```bash
+git remote set-url origin <address>
+```
 
-[Google][1]  
-[Yahoo][2]  
-[MSN][3]  
+## gitk
+```bash
+gitk <filename>
+gitk origin/<branch name>
+```
+
+## git rebase
+this can make sure git history are all in the same line
+
+first make a branch  
+and then you can do all you want to commit edit etcetera  
+```bash 
+git checkout -b <branch_name>
+git commit ...
+```
+
+chekcout back to main or master
+```bash
+git checkout <main or master>
+git pull # update to local main
+```
+chekcout back to branch for rebase newest main
+```bash
+git checkout <branch_name>
+git rebase <main or master> # to make newest main to be branch's base 
+```
+
+chekcout back to main for rebase newest branch
+```bash
+git checkout <main or master>
+git rebase <branch_name> # to make newest branch to be main's base 
+```
+
+now you can push to remote and also can delete branch
+```bash
+git push
+git branch -d <branch_name>
+```
+
+## git sparse-checkout
+This lets you only check out part of the repo locally while keeping everything tracked in Git.
+
+Enable sparse checkout:
+```bash
+git sparse-checkout init --cone
+```
+Set what folders/files you want to keep:
+
+```bash
+git sparse-checkout set src/ README.md
+```
+
+Only src/ and README.md will be visible. Everything else is hidden (but still exists in Git history and remote).
+
+If you want to show more later:
+```bash
+git sparse-checkout set src/ docs/ tools/
+```
+
+To turn off sparse checkout and bring back all files:
+```bash
+git sparse-checkout disable
+```
+⚠️ This only works on Git 2.25+ (run git --version to check)
 
 
-[1]: http://google.com/        "游標顯示"
-[2]: http://search.yahoo.com/  "游標顯示"
-[3]: http://search.msn.com/    "游標顯示"
+# 10. Step-by-Step: Use a Local Folder as a Git Remote
 
-Picture Link
+## 10.1. Create a bare repo (local "remote")
 
-![圖片名稱](連結 "游標顯示")
+```bash
+mkdir -p /path/to/remote-repo.git
+cd /path/to/remote-repo.git
+git init --bare
+```
+A bare repo has no working files — it's used just for pushing/pulling.
 
-[![圖片](圖片網址)](連結網址)
+## 10.2. Set the local folder as remote in your project
+Go to your working Git repo (your project):
 
+```bash
+cd /path/to/your/project
+git remote add origin /path/to/remote-repo.git
+```
 
-> This is the first level of quoting.
->
->> This is nested blockquote.  
->> 1231321
->
-> Back to the first level.
->> 123  
->> 456  
-> 
-> 789
+You can now push and pull to this local "remote":
+```bash
+git pull origin main  # or master, or your branch name
+git push origin main  # or master, or your branch name
+```
 
-
-<style>
-r { color: Red }
-o { color: Orange }
-g { color: Green }
-</style>
-
-# TODOs:
-
-- <r>TODO:</r> Important thing to do
-- <o>TODO:</o> Less important thing to do
-- <g>DONE:</g> Breath deeply and improve karma
-
-
-\### 123 \###
-
-
-| 欄位1 | 欄位2 | 欄位3 |
-| :-- | --: |:--:|
-| 置左  | 置右 | 置中 |
-|1|2|3|
-|10|23|32|
-|1110|2---3|++|
+You can even clone from it like this:
+```bash
+git clone /path/to/remote-repo.git
+```
