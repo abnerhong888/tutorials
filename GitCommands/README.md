@@ -127,43 +127,43 @@ git branch -d <name>
 
 # 9. Others
 
-## git status
+## -- git status
 ```bash
 git status -> check status like you don't commit
 git status -s -> short status
 ```
 
-## git ls-files
+## -- git ls-files
 ```bash
 git ls-files -> list all files 
 ```
 
-## git diff
+## -- git diff
 ```bash
 git diff
 git diff --staged
 ```
 
-## git log
+## -- git log
 ```bash
 git log 
 git log --oneline --reverse
 ```
 
-## git show
+## -- git show
 ```bash
 git show HEAD~1 -> show head and step back 1
 git show HEAD~1:<filepath> -> <ID> is also work
 git show <ID>
 ```
-## git check
+## -- git check
 ```bash
 git checkout
 git checkout <ID>
 git checkout <branck name>
 git checkout -b <branck name>
 ```
-## git restore
+## -- git restore
 ```bash
 git restore . -> undo all local changes
 git restore file.txt -> undo all modified file
@@ -171,23 +171,23 @@ git restore --source=<ID> file.txt -> restore specific file with commited
 git restore --source=HEAD~1 file.txt
 git restore --staged file.txt -> restroe staged file to working file
 ```
-## git reset
+## -- git reset
 ```bash
 git reset --hard <ID> -> delete commit by ID
 git clean -fd -> clean untracked files
 ```
-## git remote
+## -- git remote
 ```bash
 git remote set-url origin <address>
 ```
 
-## gitk
+## -- gitk
 ```bash
 gitk <filename>
 gitk origin/<branch name>
 ```
 
-## git rebase
+## -- git rebase
 this can make sure git history are all in the same line
 
 first make a branch  
@@ -220,7 +220,7 @@ git push
 git branch -d <branch_name>
 ```
 
-## git sparse-checkout
+## -- git sparse-checkout
 This lets you only check out part of the repo locally while keeping everything tracked in Git.
 
 Enable sparse checkout:
