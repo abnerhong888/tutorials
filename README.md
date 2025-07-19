@@ -9,4 +9,5 @@
     space f g file grep search
     space c s symbols
     space u h on/off inlay hint
+    space u d on/off diagnose
     
