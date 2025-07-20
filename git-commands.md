@@ -148,6 +148,9 @@ git diff --staged
 ```bash
 git log 
 git log --oneline --reverse
+# git graph with local main and remote main
+git log --oneline --graph --decorate --all --branches=main
+gitk main origin/main
 ```
 
 ## -- git show
@@ -185,10 +188,19 @@ git remote set-url origin <address>
 ```bash
 gitk <filename>
 gitk origin/<branch name>
+gitk main origin/main
 ```
 
 ## -- git rebase
 this can make sure git history are all in the same line
+
+fetch first and rebase
+```bash
+git fetch
+git rebase <remote/branch>
+```
+
+or  
 
 first make a branch  
 and then you can do all you want to commit edit etcetera  
