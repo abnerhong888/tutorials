@@ -150,6 +150,7 @@ git log
 git log --oneline --reverse
 # git graph with local main and remote main
 git log --oneline --graph --decorate --all --branches=main
+gitk main origin/main
 ```
 
 ## -- git show
@@ -187,6 +188,7 @@ git remote set-url origin <address>
 ```bash
 gitk <filename>
 gitk origin/<branch name>
+gitk main origin/main
 ```
 
 ## -- git rebase
