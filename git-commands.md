@@ -194,6 +194,14 @@ gitk main origin/main
 ## -- git rebase
 this can make sure git history are all in the same line
 
+fetch first and rebase
+```bash
+git fetch
+git rebase <remote/branch>
+```
+
+or  
+
 first make a branch  
 and then you can do all you want to commit edit etcetera  
 ```bash 
