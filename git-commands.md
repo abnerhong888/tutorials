@@ -13,22 +13,28 @@ Head is means in current branch
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "Your Email"
+git config --list -> show all settings
 ```
 
 Set vscode editor if you want to
 ```bash
 git config --global core.editor nvim or vim
-git config --global core.editor "code --wait"
+git config --global core.editor "code --wait --new-window"
 git config --global -e -> open editor to edit .gitconfig
-git config --global credential.helper store
+git config --global credential.helper store -> for recording your password
+# unset example
+git config --global --unset core.editor
 ```
 
 Set vscode as a default diff tool
 ```bash
 git config --global diff.tool vscode
-git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+git config --global difftool.vscode.cmd 'code --wait --diff --new-window $LOCAL $REMOTE'
 **make sure command is right in .gitconfig**
 git config --global -e
+# how to use
+git difftool <file>
+git difftool commit1 commit2
 ```
 
 Setting the end of line format, ex. windows is \r\n, mac is \n
@@ -120,7 +126,7 @@ git difftool --staged
 git branch <name> -> create new branch
 git checkout <branch name> -> switch between branch name
 git branch 
-git branch -a
+git branch -v -a
 git push -u origin <branch name>
 git branch -d <name>
 ```
@@ -242,14 +248,14 @@ git sparse-checkout init --cone
 Set what folders/files you want to keep:
 
 ```bash
-git sparse-checkout set src/ README.md
+git sparse-checkout set src/ README.md --skip-checks
 ```
 
 Only src/ and README.md will be visible. Everything else is hidden (but still exists in Git history and remote).
 
 If you want to show more later:
 ```bash
-git sparse-checkout set src/ docs/ tools/
+git sparse-checkout set src/ docs/ tools/ --skip-checks
 ```
 
 To turn off sparse checkout and bring back all files:
