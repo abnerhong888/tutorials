@@ -242,14 +242,14 @@ git sparse-checkout init --cone
 Set what folders/files you want to keep:
 
 ```bash
-git sparse-checkout set src/ README.md
+git sparse-checkout set src/ README.md --skip-checks
 ```
 
 Only src/ and README.md will be visible. Everything else is hidden (but still exists in Git history and remote).
 
 If you want to show more later:
 ```bash
-git sparse-checkout set src/ docs/ tools/
+git sparse-checkout set src/ docs/ tools/ --skip-checks
 ```
 
 To turn off sparse checkout and bring back all files:
