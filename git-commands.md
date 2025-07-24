@@ -13,6 +13,7 @@ Head is means in current branch
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "Your Email"
+git config --list -> show all settings
 ```
 
 Set vscode editor if you want to
@@ -26,7 +27,7 @@ git config --global credential.helper store
 Set vscode as a default diff tool
 ```bash
 git config --global diff.tool vscode
-git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 **make sure command is right in .gitconfig**
 git config --global -e
 ```
