@@ -19,7 +19,7 @@ git config --list -> show all settings
 Set vscode editor if you want to
 ```bash
 git config --global core.editor nvim or vim
-git config --global core.editor "code --wait"
+git config --global core.editor "code --wait --new-window"
 git config --global -e -> open editor to edit .gitconfig
 git config --global credential.helper store
 ```
