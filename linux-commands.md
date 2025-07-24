@@ -82,13 +82,18 @@
   perf stat ./your_program
 ```
 # tee
-```base
+```bash
   ./<program> | tee log.log --> visible in file: StdOut
   ./<program> |& tee log.log --> visible in file: StdOut, StdErr
   ./<program> |& tee log.log --> override file
   ./<program> |& tee -a log.log --> -a is append file
   # Fix tee not showing output, Line-buffered stdout
   stdbuf -oL ./<program> |& tee log.log
+```
+
+# watch
+```bash
+  watch -n 1 "ps aux | grep <name>"
 ```
 
 # Linux can not delete， ”Device or resource busy”
