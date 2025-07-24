@@ -73,8 +73,9 @@
 
 # profiling
 ```bash
+  # program analysis tool
   valgrind ...
-  memcheck
+  # performance analysis tool 
   perf ...
 ```
 # tee
