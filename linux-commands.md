@@ -75,8 +75,11 @@
 ```bash
   # program analysis tool
   valgrind ...
-  # performance analysis tool 
-  perf ...
+  # performance analysis tool
+  perf record ./your_program
+  perf report perf.data
+  
+  perf stat ./your_program
 ```
 # tee
 ```base
