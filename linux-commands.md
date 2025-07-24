@@ -68,13 +68,22 @@
 # obj copy
 ```bash
   # redefine symbol in static library
-  objcopy --redefine-sym calloc=callocflake file.a
+  objcopy --redefine-sym <ori_symbol>=<new_symbol> file.a
 ```
 
 # profiling
 ```bash
   valgrind ...
   perf ...
+```
+# tee
+```base
+./<program> | tee log.log --> visible in file: StdOut
+./<program> |& tee log.log --> visible in file: StdOut, StdErr
+./<program> |& tee log.log --> override file
+./<program> |& tee -a log.log --> -a is append file
+# Fix tee not showing output, Line-buffered stdout
+stdbuf -oL ./<program> |& tee log.log
 ```
 
 # Linux can not delete， ”Device or resource busy”
