@@ -183,6 +183,12 @@ git restore --staged file.txt -> restroe staged file to working file
 ## -- git reset
 ```bash
 git reset --hard <ID> -> delete commit by ID
+# if you wwant to restore the commit which deleted
+git reflog
+git reset --hard <ID> -> ID you want to restore
+```
+## -- git clean
+```bash
 git clean -fd -> clean untracked files
 ```
 ## -- git remote
