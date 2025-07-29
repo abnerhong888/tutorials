@@ -182,7 +182,10 @@ git restore --staged file.txt -> restroe staged file to working file
 ```
 ## -- git reset
 ```bash
-git reset --hard <ID> -> delete commit by ID
+#Just remove the last commit (keep the changes as uncommitted)
+git reset --soft <ID>
+#Remove the last commit and also discard changes
+git reset --hard <ID> 
 # if you wwant to restore the commit which deleted
 git reflog
 git reset --hard <ID> -> ID you want to restore
