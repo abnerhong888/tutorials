@@ -3,6 +3,7 @@
 # grep
 ```bash
   grep -Znr . -e <pattern>
+grep -Znr --include=\*.<ext1> . -e <pattern>
   grep -Znr --include=\*.{<ext1, ext2>} . -e <pattern>
 ```
 # tar
