@@ -66,11 +66,12 @@ EOL
     PROXY_PID=$!
     
     # Wait for proxy and handle interruption
-    trap "kill $PROXY_PID 2>/dev/null; rm $CFG_NAME -f; exit" INT TERM
+    trap "kill $PROXY_PID 2>/dev/null;" INT TERM
     wait $PROXY_PID
     
     # Cleanup if proxy exits normally
     rm $CFG_NAME -f
+    clear
 }
 
 au.net.static(){
