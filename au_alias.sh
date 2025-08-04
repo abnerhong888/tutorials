@@ -4,8 +4,21 @@ au.test(){
     echo "autest"
 }
 
+au.clear.his(){
+    # clear history in memory
+    history -c
+}
+
+au.clear.his.all(){
+     # clear history in memory
+    history -c
+    # clear ~/.bash_history
+    history -w
+   
+}
+
 au.source(){
-    source ~/scripts/au_alias.sh
+    source ~/ws/mygit/tutorials/au_alias.sh
 }
 
 au.fnmode(){
@@ -24,17 +37,17 @@ au.ssh(){
     ssh user@192.168.61.28
 }
 
-au.lpxy(){
+au.pxyl(){
     if [ -z "$1" ]; then
-        echo "Usage: au.lpxy <ip>"
+        echo "Usage: au.pxyl <ip/24>"
         return
     fi
     nmap -p 3128,8080,8888,1080 $1
 }
 
-au.gpxy(){
+au.pxyg(){
     if [ -z "$1" ]; then
-        echo "Usage: au.gpxy <ip>"
+        echo "Usage: au.pxyg <ip/24>"
         return
     fi
     nmap -p 3128,8080,8888,1080 $1 | grep -E 'Nmap scan report|open'
@@ -60,16 +73,18 @@ flush
 EOL
 
     sudo true
+    clear
     # Run proxy in background
     sudo $PROXY_DIR/3proxy $CFG_NAME &
     PROXY_PID=$!
     
     # Wait for proxy and handle interruption
-    trap "kill $PROXY_PID 2>/dev/null; rm $CFG_NAME -f; exit" INT TERM
+    trap "kill $PROXY_PID 2>/dev/null;" INT TERM
     wait $PROXY_PID
     
     # Cleanup if proxy exits normally
     rm $CFG_NAME -f
+    clear
 }
 
 au.net.static(){
