@@ -5,7 +5,7 @@ au.test(){
 }
 
 au.source(){
-    source ~/scripts/au_alias.sh
+    source ~/ws/mygit/tutorials/au_alias.sh
 }
 
 au.fnmode(){
