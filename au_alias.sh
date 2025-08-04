@@ -24,17 +24,17 @@ au.ssh(){
     ssh user@192.168.61.28
 }
 
-au.lpxy(){
+au.pxyl(){
     if [ -z "$1" ]; then
-        echo "Usage: au.lpxy <ip>"
+        echo "Usage: au.pxyl <ip>"
         return
     fi
     nmap -p 3128,8080,8888,1080 $1
 }
 
-au.gpxy(){
+au.pxyg(){
     if [ -z "$1" ]; then
-        echo "Usage: au.gpxy <ip>"
+        echo "Usage: au.pxyg <ip>"
         return
     fi
     nmap -p 3128,8080,8888,1080 $1 | grep -E 'Nmap scan report|open'
