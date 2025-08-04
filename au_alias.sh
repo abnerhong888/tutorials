@@ -60,6 +60,7 @@ flush
 EOL
 
     sudo true
+    clear
     # Run proxy in background
     sudo $PROXY_DIR/3proxy $CFG_NAME &
     PROXY_PID=$!
