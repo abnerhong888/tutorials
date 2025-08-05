@@ -4,10 +4,13 @@
 ```bash
   # Find files by name
   find . -name "file.txt"
+
   # Find files with wildcard
   find . -name "*.c"
+
   # Find only directories
   find . -type d
+
   # Find only files
   find . -type f
 ```
@@ -42,6 +45,12 @@
 
   # extract file
   tar -xvf <file name> -C <directory>
+
+  # list tar file content
+  tar -tf <file name>
+
+  # list tar file content first layer
+  tar -tf archive.tar | cut -d/ -f1 | sort -u
 ```
 
 # -- ar
