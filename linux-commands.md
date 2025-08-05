@@ -1,6 +1,6 @@
 ## linux-commands
 
-# --grep
+# -- grep
 ```bash
   grep [options] PATTERN [file...]
 
@@ -20,7 +20,7 @@
 | `-c`   | Count matching lines                |
 
 
-# --tar
+# -- tar
 ```bash
   # use gzip compress
   tar -cvzf <name>.tar.gz <folder or file>
@@ -32,7 +32,7 @@
   tar -xvf <file name> -C <directory>
 ```
 
-# --ar
+# -- ar
 ```bash
   # list files in a
   ar -t <name>.a
@@ -47,13 +47,13 @@
 
 ```
 
-# --ld
+# -- ld
 ```bash
   # Shows shared libraries used by a binary
   ldd <name>.so
 ```
 
-# --nm
+# -- nm
 ```bash
   # nm command is used to list symbols
   nm <name>.a
@@ -71,37 +71,37 @@
 |W      |	Weak symbol                                    |
 
 
-# --du
+# -- du
 ```bash
   # show folder total size
   du -hs <folder>
 ```
 
-# --size
+# -- size
 ```bash
   size <.o, .so ...>
 ```
 
-# --objdump
+# -- objdump
 ```bash
   # dump all symbol and assembly
   objdump -Slz a.out > log.log
   objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
 ```
 
-# --objcopy
+# -- objcopy
 ```bash
   # redefine symbol in static library
   objcopy --redefine-sym <ori_symbol>=<new_symbol> file.a
 ```
 
-# --c++filt
+# -- c++filt
 ```bash
   #demangle c++ function symbol
   c++filt <symbol> 
 ```
 
-# --profiling
+# -- profiling
 ```bash
   # program analysis tool
   valgrind ...
@@ -111,7 +111,7 @@
   
   perf stat ./your_program
 ```
-# --tee
+# -- tee
 ```bash
   ./<program> | tee log.log --> visible in file: StdOut
   ./<program> |& tee log.log --> visible in file: StdOut, StdErr
@@ -120,7 +120,7 @@
   # Fix tee not showing output, Line-buffered stdout
   stdbuf -oL ./<program> |& tee log.log
 ```
-# --diff
+# -- diff
 ```bash
   # -u: Shows a unified diff (easy to read)
   diff -u <file1> <file2>
@@ -132,12 +132,12 @@
   # meld is also a good app 
 ```
 
-# --watch
+# -- watch
 ```bash
   watch -n 1 "ps aux | grep <name>"
 ```
 
-# --Linux can not delete， ”Device or resource busy”
+# -- Linux can not delete， ”Device or resource busy”
 ```bash
   lsof |grep <filename>
   kill -9 <processid>
