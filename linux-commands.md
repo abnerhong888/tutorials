@@ -2,10 +2,24 @@
 
 # grep
 ```bash
-  grep -Znr . -e <pattern>
-  grep -Znr --include=\*.<ext1> . -e <pattern>
-  grep -Znr --include=\*.{<ext1, ext2>} . -e <pattern>
+  grep [options] PATTERN [file...]
+
+  grep -Znr . -e "<pattern>"
+  grep -Znr --include=\*.<ext1> . -e "<pattern>"
+  grep -Znr --include=\*.{<ext1, ext2>} . -e "<pattern>"
 ```
+| Option | Meaning                             |
+| ------ | ----------------------------------- |
+| `-i`   | Ignore case                         |
+| `-r`   | Recursive search                    |
+| `-w`   | Match whole word                    |
+| `-v`   | Invert match                        |
+| `-n`   | Show line number                    |
+| `-E`   | Use extended regex                  |
+| `-l`   | Show filenames that contain matches |
+| `-c`   | Count matching lines                |
+
+
 # tar
 ```bash
   # use gzip compress
@@ -35,7 +49,8 @@
 
 # ld
 ```bash
-  ld <name>.so
+  # Shows shared libraries used by a binary
+  ldd <name>.so
 ```
 
 # nm
