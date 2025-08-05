@@ -1,5 +1,17 @@
 ## linux-commands
 
+# -- find
+```bash
+  # Find files by name
+  find . -name "file.txt"
+  # Find files with wildcard
+  find . -name "*.c"
+  # Find only directories
+  find . -type d
+  # Find only files
+  find . -type f
+```
+
 # -- grep
 ```bash
   grep [options] PATTERN [file...]
