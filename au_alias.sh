@@ -26,7 +26,7 @@ au.ssh(){
 
 au.pxyl(){
     if [ -z "$1" ]; then
-        echo "Usage: au.pxyl <ip>"
+        echo "Usage: au.pxyl <ip/24>"
         return
     fi
     nmap -p 3128,8080,8888,1080 $1
@@ -34,7 +34,7 @@ au.pxyl(){
 
 au.pxyg(){
     if [ -z "$1" ]; then
-        echo "Usage: au.pxyg <ip>"
+        echo "Usage: au.pxyg <ip/24>"
         return
     fi
     nmap -p 3128,8080,8888,1080 $1 | grep -E 'Nmap scan report|open'
