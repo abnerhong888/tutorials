@@ -60,23 +60,16 @@
   nm -s <name>.a
   nm a.out
 ```
-|Symbol |	Meaning |Flag|Description|
+|Symbol | Meaning                                        |Flag           |Description                          |
 |:--|:--|:--|:--|
-|T |	Function (in .text section, global) |-C | Demangle C++ symbol names |
-|t |	Function (local/private) |-g | Show only external (global) symbols |
-|B |	Global uninitialized variable (.bss) |-n | Sort symbols by address |
-|D |	Global initialized data (.data) |-u | Show only undefined symbols |
-|U |	Undefined (symbol needed but not defined here) |--defined-only | Show only defined symbols |
-|R |	Read-only data (.rodata) |
-|W |	Weak symbol |
-  
-|Flag|Description|
-|:--|:--|
-|-C | Demangle C++ symbol names |
-|-g | Show only external (global) symbols |
-|-n | Sort symbols by address |
-|-u | Show only undefined symbols |
-|--defined-only | Show only defined symbols |
+|T      |	Function (in .text section, global)            |-C             | Demangle C++ symbol names           |
+|t      |	Function (local/private)                       |-g             | Show only external (global) symbols |
+|B      |	Global uninitialized variable (.bss)           |-n             | Sort symbols by address             |
+|D      |	Global initialized data (.data)                |-u             | Show only undefined symbols         |
+|U      |	Undefined (symbol needed but not defined here) |--defined-only | Show only defined symbols           |
+|R      |	Read-only data (.rodata)                       |
+|W      |	Weak symbol                                    |
+
 
 # du
 ```bash
