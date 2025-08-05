@@ -60,13 +60,13 @@
   nm -s <name>.a
   nm a.out
 ```
-|Symbol |	Meaning |
-|:--|:--|
-|T |	Function (in .text section, global) |
-|t |	Function (local/private) |
-|B |	Global uninitialized variable (.bss) |
-|D |	Global initialized data (.data) |
-|U |	Undefined (symbol needed but not defined here) |
+|Symbol |	Meaning |Flag|Description|
+|:--|:--|:--|:--|
+|T |	Function (in .text section, global) |-C | Demangle C++ symbol names |
+|t |	Function (local/private) |-g | Show only external (global) symbols |
+|B |	Global uninitialized variable (.bss) |-n | Sort symbols by address |
+|D |	Global initialized data (.data) |-u | Show only undefined symbols |
+|U |	Undefined (symbol needed but not defined here) |--defined-only | Show only defined symbols |
 |R |	Read-only data (.rodata) |
 |W |	Weak symbol |
   
