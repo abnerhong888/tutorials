@@ -54,13 +54,13 @@
   # R	Read-only data (.rodata)
   # W	Weak symbol
 ```
-|Flag	|Description|  
-| :-- | --: |:--:|  
-|-C | Demangle C++ symbol names|  
-|-g | Show only external (global) symbols|  
-|-n | Sort symbols by address|  
-|-u | Show only undefined symbols|  
-|--defined-only | Show only defined symbols|  
+|Flag|Description|
+|:--:|:--:|
+|-C | Demangle C++ symbol names |
+|-g | Show only external (global) symbols |
+|-n | Sort symbols by address |
+|-u | Show only undefined symbols |
+|--defined-only | Show only defined symbols |
 
 # du
 ```bash
