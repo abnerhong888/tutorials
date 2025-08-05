@@ -44,18 +44,19 @@
   nm <name>.a
   nm -s <name>.a
   nm a.out
-  
-  # Symbol	Meaning
-  # T	Function (in .text section, global)
-  # t	Function (local/private)
-  # B	Global uninitialized variable (.bss)
-  # D	Global initialized data (.data)
-  # U	Undefined (symbol needed but not defined here)
-  # R	Read-only data (.rodata)
-  # W	Weak symbol
 ```
+|Symbol |	Meaning |
+|:--|:--|
+|T |	Function (in .text section, global) |
+|t |	Function (local/private) |
+|B |	Global uninitialized variable (.bss) |
+|D |	Global initialized data (.data) |
+|U |	Undefined (symbol needed but not defined here) |
+|R |	Read-only data (.rodata) |
+|W |	Weak symbol |
+  
 |Flag|Description|
-|:--:|:--:|
+|:--|:--|
 |-C | Demangle C++ symbol names |
 |-g | Show only external (global) symbols |
 |-n | Sort symbols by address |
