@@ -56,20 +56,21 @@
 
 # obj dump
 ```bash
+  # dump all symbol and assembly
   objdump -Slz a.out > log.log
   objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
-```
-
-# c++filt
-```bash
-  #demangle c++ function symbol
-  c++filt <symbol> 
 ```
 
 # obj copy
 ```bash
   # redefine symbol in static library
   objcopy --redefine-sym <ori_symbol>=<new_symbol> file.a
+```
+
+# c++filt
+```bash
+  #demangle c++ function symbol
+  c++filt <symbol> 
 ```
 
 # profiling
@@ -90,6 +91,15 @@
   ./<program> |& tee -a log.log --> -a is append file
   # Fix tee not showing output, Line-buffered stdout
   stdbuf -oL ./<program> |& tee log.log
+```
+# diff
+```bash
+  # -u: Shows a unified diff (easy to read)
+  diff -u <file1> <file2>
+  # -r: Recursively compare all subdirectories and files
+  diff -ru <folder1> <folder2>
+  # -q: Quiet — only shows which files differ
+  diff -rq <folder1> <folder2>
 ```
 
 # watch
