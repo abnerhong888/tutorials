@@ -40,9 +40,21 @@
 
 # nm
 ```bash
+  # nm command is used to list symbols
   nm <name>.a
   nm -s <name>.a
+  nm a.out
+  
+  # Symbol	Meaning
+  # T	Function (in .text section, global)
+  # t	Function (local/private)
+  # B	Global uninitialized variable (.bss)
+  # D	Global initialized data (.data)
+  # U	Undefined (symbol needed but not defined here)
+  # R	Read-only data (.rodata)
+  # W	Weak symbol
 ```
+
 
 # du
 ```bash
