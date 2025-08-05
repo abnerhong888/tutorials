@@ -4,6 +4,11 @@ au.test(){
     echo "autest"
 }
 
+au.clear.his(){
+    history -c
+    history -w
+}
+
 au.source(){
     source ~/ws/mygit/tutorials/au_alias.sh
 }
