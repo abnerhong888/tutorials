@@ -100,6 +100,8 @@
   diff -ru <folder1> <folder2>
   # -q: Quiet — only shows which files differ
   diff -rq <folder1> <folder2>
+
+  # meld is also a good app 
 ```
 
 # watch
