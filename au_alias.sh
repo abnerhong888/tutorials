@@ -97,6 +97,14 @@ au.net.static(){
     sudo ip route add 192.168.0.0/16 via $IP
 }
 
+au.net.status(){
+    nmcli device status
+}
+
+au.net.list(){
+    nmcli connection show
+}
+
 au.net.cn.name(){
     nmcli -t -f NAME,DEVICE,TYPE connection show --active | grep ethernet | cut -d ':' -f1
 }
