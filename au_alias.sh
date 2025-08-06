@@ -7,6 +7,7 @@ au.test(){
 au.clear.his(){
     # clear history in memory
     history -c
+    clear
 }
 
 au.clear.his.all(){
@@ -14,7 +15,7 @@ au.clear.his.all(){
     history -c
     # clear ~/.bash_history
     history -w
-   
+    clear
 }
 
 au.source(){
