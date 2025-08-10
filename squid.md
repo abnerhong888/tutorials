@@ -13,6 +13,7 @@ cp /etc/squid/squid.conf /etc/squid/squid.conf.bak
 
 
 On VM1:
+/etc/squid/squid.conf
 ```conf
 http_port 3128
 acl localnet src 192.168.31.0/24
@@ -22,7 +23,7 @@ http_access deny all
 sudo systemctl restart squid.service
 
 On VM2:
-
+/etc/squid/squid.conf
 ```conf
 http_port 3128
 cache_peer 192.168.61.28 parent 3128 0 no-query default
@@ -57,7 +58,10 @@ sudo htpasswd /etc/squid/passwd anotheruser
 Configure Squid to use authentication
 Edit /etc/squid/squid.conf on VM1, add above your http_access rules:
 
+/etc/squid/squid.conf
 ```conf
+http_port 3128
+
 # Authentication settings
 auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
 auth_param basic realm Squid Proxy
@@ -73,5 +77,27 @@ http_access allow authenticated localnet
 # Deny everything else
 http_access deny all
 ```
+sudo systemctl restart squid.service
+
+Step 2 — VM2: Squid with Parent Proxy
+On VM2:
+/etc/squid/squid.conf
+```conf
+http_port 3128
+
+# VM3's network
+acl localnet src 192.168.32.0/24
+
+# Parent proxy (VM1) with authentication
+cache_peer 192.168.31.28 parent 3128 0 no-query default login=myuser:mypassword
+
+# Always send traffic to parent
+never_direct allow all
+
+# Allow VM3 to connect
+http_access allow localnet
+http_access deny all
+```
+
 sudo systemctl restart squid.service
 
