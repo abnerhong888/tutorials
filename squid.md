@@ -65,7 +65,7 @@ auth_param basic credentialsttl 2 hours
 acl authenticated proxy_auth REQUIRED
 
 # Define your network (optional)
-acl localnet src 192.168.61.0/24
+acl localnet src 192.168.31.0/24
 
 # Allow authenticated users from your subnet
 http_access allow authenticated localnet
