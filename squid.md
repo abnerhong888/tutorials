@@ -26,9 +26,9 @@ On VM2:
 /etc/squid/squid.conf
 ```conf
 http_port 3128
-cache_peer 192.168.61.28 parent 3128 0 no-query default
+cache_peer 192.168.31.28 parent 3128 0 no-query default
 never_direct allow all
-acl localnet src 192.168.51.0/24
+acl localnet src 192.168.32.0/24
 http_access allow localnet
 http_access deny all
 ```
