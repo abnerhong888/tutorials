@@ -85,17 +85,23 @@ On VM2:
 ```conf
 http_port 3128
 
-# VM3's network
+# Auth for VM2
+auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
+auth_param basic realm Squid Proxy
+auth_param basic credentialsttl 2 hours
+acl authenticated proxy_auth REQUIRED
+
+# VM3 network
 acl localnet src 192.168.32.0/24
 
-# Parent proxy (VM1) with authentication
-cache_peer 192.168.31.28 parent 3128 0 no-query default login=myuser:mypassword
+# Parent proxy (VM1) with VM1 credentials
+cache_peer 192.168.31.28 parent 3128 0 no-query default login=myuser1:mypass1
 
-# Always send traffic to parent
+# Always go through parent
 never_direct allow all
 
-# Allow VM3 to connect
-http_access allow localnet
+# Allow authenticated clients from localnet
+http_access allow authenticated localnet
 http_access deny all
 ```
 
