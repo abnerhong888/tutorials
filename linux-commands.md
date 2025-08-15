@@ -140,13 +140,15 @@
   ./<program> |& tee -a log.log --> -a is append file
   # Fix tee not showing output, Line-buffered stdout
   stdbuf -oL ./<program> |& tee log.log
+  # appear immediately
+  stdbuf -o0 ./<program> |& tee log.log
 ```
 # -- diff
 ```bash
   # -u: Shows a unified diff (easy to read)
-  diff -u <file1> <file2>
+  diff -u --color=always <file1> <file2>
   # -r: Recursively compare all subdirectories and files
-  diff -ru <folder1> <folder2>
+  diff -ru --color=always <folder1> <folder2>
   # -q: Quiet — only shows which files differ
   diff -rq <folder1> <folder2>
 
