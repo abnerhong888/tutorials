@@ -140,6 +140,8 @@
   ./<program> |& tee -a log.log --> -a is append file
   # Fix tee not showing output, Line-buffered stdout
   stdbuf -oL ./<program> |& tee log.log
+  # appear immediately
+  stdbuf -o0 ./<program> |& tee log.log
 ```
 # -- diff
 ```bash
