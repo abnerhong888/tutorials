@@ -7,6 +7,7 @@ or
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+sudo mv /opt/nvim-linux-x86_64 /opt/nvim
 ```
 
 # 2. Set environment variable
@@ -14,16 +15,7 @@ sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 #no need to do
 
 or
-    export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-    
-    or
-
-    wirte in /.profile
-        #set PATH with nvim
-        if [ -d "/opt/nvim-linux-x86_64/bin" ] ; then
-            PATH="/opt/nvim-linux-x86_64/bin:$PATH"
-        fi
-    reboot system   
+      sudo ln -s /opt/nvim/bin/nvim /usr/bin/nvim
 
 ```
 
