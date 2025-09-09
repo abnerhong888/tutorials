@@ -39,7 +39,7 @@ git difftool commit1 commit2
 
 Set git log format
 ```bash
-git config --global alias.lg "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h%Creset -%Cgreen(%ar)%Creset %C(blue)<%an>%Creset %C(auto)%d%Creset %s'"
+git config --global alias.lg "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h%Creset -%Cgreen(%ad)%Creset %C(blue)<%an>%Creset %C(auto)%d%Creset %s'"
 #unset
 git config --global --unset alias.lg
 ```
