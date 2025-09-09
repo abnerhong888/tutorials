@@ -132,7 +132,28 @@ git push -u origin <branch name>
 git branch -d <name>
 ```
 
-# 9. Others
+# 9. Git Drop
+
+```bash
+# create new branch first
+git branch test
+git checkout test
+# git log to watch git commit ID
+git log
+# use rebase command to drop
+git rebase -i <commitID>
+
+# it will open a new window with vi or editor you setted
+# pick abc123 Commit message
+# pick def456 Next commit
+# --
+# you can edit pick to drop
+# drop abc123 Commit message
+# pick def456 Next commit
+
+```
+
+# 10. Others
 
 ## -- git status
 ```bash
