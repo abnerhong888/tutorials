@@ -35,11 +35,28 @@ sudo usermod -aG docker $USER
 # 7. Example: Install & Run Ubuntu 22.04 in Docker
 ```bash
 docker pull ubuntu:22.04
-docker run -it ubuntu:22.04 bash
 ```
 
-# 8. How to use auto-remove
+# 8. How to use
 ```bash
-docker run --rm -it ubuntu:22.04 bash
+#list all container
+docker ps -a
+
+# Create and start a new container
+docker run -it --name <container_name> ubuntu:22.04 bash
+
+# Create and start a new container with auto-remove 
+docker run --rm -it --name <container_name> ubuntu:22.04 bash
+
+# remove container
+docker rm <container_id_or_name>
+
+# start container
+docker start <container_name>
+
+# stop container
+docker stop <container_name>
+
+
 ```
 
