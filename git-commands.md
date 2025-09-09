@@ -41,7 +41,7 @@ Set git log format
 ```bash
 git config --global format.pretty "format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset"
 git config --global log.abbrevcommit "true"
-git config --global alias.lg "log --oneline --graph --decorate --all --branches=main"
+git config --global alias.lg "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h%Creset -%Cgreen(%ar)%Creset %C(blue)<%an>%Creset %C(auto)%d%Creset %s'"
 #unset
 git config --global --unset format.pretty
 git config --global --unset log.abbrevcommit
