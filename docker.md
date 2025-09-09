@@ -32,3 +32,14 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
 
+# 7. Example: Install & Run Ubuntu 22.04 in Docker
+```bash
+docker pull ubuntu:22.04
+docker run -it ubuntu:22.04 bash
+```
+
+# 8. How to use auto-remove
+```bash
+docker run --rm -it ubuntu:22.04 bash
+```
+
