@@ -37,6 +37,13 @@ git difftool <file>
 git difftool commit1 commit2
 ```
 
+Set git log format
+```bash
+git config --global format.pretty "format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset"
+#unset
+git config --global --unset format.pretty
+```
+
 Setting the end of line format, ex. windows is \r\n, mac is \n
 ```bash
 git config --global core.autocrlf <value>  -> <value> windows: true, macOS: input
