@@ -125,7 +125,8 @@ git difftool --staged
 ```bash
 git branch <name> -> create new branch
 git checkout <branch name> -> switch between branch name
-git branch 
+git branch
+git branch -vv
 git branch -v -a
 git push -u origin <branch name>
 git branch -d <name>
