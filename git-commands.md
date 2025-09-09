@@ -40,8 +40,12 @@ git difftool commit1 commit2
 Set git log format
 ```bash
 git config --global format.pretty "format:%h %Cblue%ad%Creset %ae %Cgreen%s%Creset"
+git config --global log.abbrevcommit "true"
+git config --global alias.lg "log --oneline --graph --decorate --all --branches=main"
 #unset
 git config --global --unset format.pretty
+git config --global --unset log.abbrevcommit
+git config --global --unset alias.lg
 ```
 
 Setting the end of line format, ex. windows is \r\n, mac is \n
