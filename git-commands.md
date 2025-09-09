@@ -37,6 +37,13 @@ git difftool <file>
 git difftool commit1 commit2
 ```
 
+Set git log format
+```bash
+git config --global alias.lg "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h%Creset -%Cgreen(%ad)%Creset %C(blue)<%an>%Creset %C(auto)%d%Creset %s'"
+#unset
+git config --global --unset alias.lg
+```
+
 Setting the end of line format, ex. windows is \r\n, mac is \n
 ```bash
 git config --global core.autocrlf <value>  -> <value> windows: true, macOS: input
@@ -125,13 +132,35 @@ git difftool --staged
 ```bash
 git branch <name> -> create new branch
 git checkout <branch name> -> switch between branch name
-git branch 
+git branch
+git branch -vv
 git branch -v -a
 git push -u origin <branch name>
 git branch -d <name>
 ```
 
-# 9. Others
+# 9. Git Drop
+
+```bash
+# create new branch first
+git branch test
+git checkout test
+# git log to watch git commit ID
+git log
+# use rebase command to drop
+git rebase -i <commitID>
+
+# it will open a new window with vi or editor you setted
+# pick abc123 Commit message
+# pick def456 Next commit
+# --
+# you can edit pick to drop
+# drop abc123 Commit message
+# pick def456 Next commit
+
+```
+
+# 10. Others
 
 ## -- git status
 ```bash
