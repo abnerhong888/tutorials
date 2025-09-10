@@ -13,6 +13,9 @@ vi ~/.tmux.conf
 # set mouse on
 set -g mouse on
 
+# Enable vi key bindings
+setw -g mode-keys vi
+
 # Use system clipboard when copying
 set-option -g set-clipboard on
 
