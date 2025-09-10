@@ -57,6 +57,7 @@ ctrl + b + arrow u d l r select panel
 press ctrl + b + arrow u d l r adjust panel size
 
 ctrl + b + s sessions window and select
+             kill session with x
 
 
 
