@@ -35,6 +35,9 @@ tmux new -s <session name>
 # attach tmux with session
 tmux attach -t <session name>
 
+# delete session
+tmux kill-session -t <session name>
+
 # tmux shortcut
 ctrl + b + ? help
 ctrl + b + " horizontally split
