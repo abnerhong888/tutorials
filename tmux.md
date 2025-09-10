@@ -21,3 +21,8 @@ bind -T copy-mode-vi y send -X copy-pipe-and-cancel "xclip -selection clipboard 
 bind -T copy-mode-vi Enter send -X copy-pipe-and-cancel "xclip -selection clipboard -in"
 
 ```
+# 3. how to use
+```bash
+# Reload your config without restarting tmux:
+tmux source-file ~/.tmux.conf
+```
