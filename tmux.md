@@ -36,15 +36,19 @@ tmux new -s <session name>
 tmux attach -t <session name>
 
 # tmux shortcut
+ctrl + b + ? help
 ctrl + b + " horizontally split
 ctrl + b + % vertically split
-ctrl + b + ? help
 ctrl + b + d detach to background
 ctrl + b + [ copy mode -> space to select and y to yank (in vi key-mode)
 ctrl + b + , rename window
 ctrl + b + c create window
 ctrl + b + x close window
-
+ctrl + b + [0-9] select window by number
+ctrl + b + n select next window
+ctrl + b + l select previous window
+ctrl + b + arrow u d l r select panel
+press ctrl + b + arrow u d l r adjust panel size
 
 
 
