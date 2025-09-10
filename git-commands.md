@@ -29,7 +29,7 @@ git config --global --unset core.editor
 Set vscode as a default diff tool
 ```bash
 git config --global diff.tool vscode
-git config --global difftool.vscode.cmd 'code --wait --diff --new-window $LOCAL $REMOTE'
+git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 **make sure command is right in .gitconfig**
 git config --global -e
 # how to use
