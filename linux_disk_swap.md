@@ -8,7 +8,7 @@ swapon --show
 sudo swapoff /swapfile
 ```
 
-# 3. 3. Remove or recreate it
+# 3. Remove or recreate it
 ```bash
 sudo rm /swapfile
 
@@ -18,7 +18,7 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 ```
 
-# 4. 4. Make sure it’s permanent
+# 4. Make sure it’s permanent
 ```bash
 # Check /etc/fstab — if you see a line with /swapfile, leave it (so it enables at boot).
 # If not, add:
