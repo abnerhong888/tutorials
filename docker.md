@@ -54,6 +54,9 @@ docker rm <container_id_or_name>
 # start container
 docker start <container_name>
 
+# attach container
+docker attach <container_name>
+
 # stop container
 docker stop <container_name>
 
