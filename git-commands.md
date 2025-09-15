@@ -228,6 +228,20 @@ git clean -fd -> clean untracked files
 git remote set-url origin <address>
 ```
 
+## -- git stash
+```bash
+# git stash push → saves changes.
+# -u stashes untracked files.
+# -m "message" → optional, lets you label the stash.
+git stash push -u -m "stash message"
+
+# list
+git stash list
+
+# pop out
+git stash pop
+```
+
 ## -- gitk
 ```bash
 gitk <filename>
