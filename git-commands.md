@@ -232,6 +232,7 @@ git remote set-url origin <address>
 ```bash
 # git stash push → saves changes.
 # -u stashes untracked files.
+# -a include ignore files
 # -m "message" → optional, lets you label the stash.
 git stash push -u -m "stash message"
 
