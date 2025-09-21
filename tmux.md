@@ -46,6 +46,7 @@ ctrl + b + % vertically split
 ctrl + b + d detach to background
 
 ctrl + b + [ copy mode -> space to select and y to yank (in vi key-mode)
+ctrl + b + ] paste copied
 
 ctrl + b + , rename window
 ctrl + b + c create window
