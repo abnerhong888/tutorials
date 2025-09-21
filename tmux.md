@@ -33,6 +33,7 @@ tmux source-file ~/.tmux.conf
 tmux new -s <session name>
 
 # attach tmux with session
+tmux a -t <session name>
 tmux attach -t <session name>
 
 # delete session
@@ -45,6 +46,7 @@ ctrl + b + % vertically split
 ctrl + b + d detach to background
 
 ctrl + b + [ copy mode -> space to select and y to yank (in vi key-mode)
+ctrl + b + ] paste copied
 
 ctrl + b + , rename window
 ctrl + b + c create window
@@ -58,6 +60,8 @@ press ctrl + b + arrow u d l r adjust panel size
 
 ctrl + b + s sessions window and select
              kill session with x
+
+ctrl + b + w sessions window and select
 
 
 
