@@ -33,6 +33,7 @@ tmux source-file ~/.tmux.conf
 tmux new -s <session name>
 
 # attach tmux with session
+tmux a -t <session name>
 tmux attach -t <session name>
 
 # delete session
@@ -58,6 +59,8 @@ press ctrl + b + arrow u d l r adjust panel size
 
 ctrl + b + s sessions window and select
              kill session with x
+
+ctrl + b + w sessions window and select
 
 
 
