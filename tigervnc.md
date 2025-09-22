@@ -24,7 +24,7 @@ unset DBUS_SESSION_BUS_ADDRESS
 ################################
 exec startxfce4
 ```
-this is for resolution optional
+this is for resolution optional, put this before exec startxfce4
 ```
 xrandr --newmode "1920x1200_60.00" 193.25 1920 2056 2256 2592 1200 1203 1209 1245 -hsync +vsync
 xrandr --newmode "2560x1440_60.00" 312.25 2560 2752 3024 3488 1440 1443 1448 1493 -hsync +vsync
