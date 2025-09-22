@@ -45,14 +45,15 @@ xrandr --addmode VNC-0 "3840x2400_60.00"
 
 ## you got to change  
 ```bash
-<user> to your username  
-<port> port you want to  
+<user> to your username
+<group> set your group
+<port> port you want to set
 ```
 
 ```bash
 sudo vi /etc/systemd/system/vncserver_<user>.service
 sudo systemctl daemon-reload
-sudo systemctl start vncserver_vncuser@<port>.service
+sudo systemctl start vncserver_user.service
 # then you can use vncviewer to connect <ip:port>
 
 # if error is -> unable to contact settings server Failed to execute child process "dbus-lanuch" (No such file or directory)
@@ -68,26 +69,28 @@ After=syslog.target network.target
 [Service]
 Type=forking
 #set your user name
-User=vncuser
+User=<user>
 #set your group
-Group=user
-Environment=/home/vncuser
-HOME=/home/vncuser
-WorkingDirectory=/home/vncuser
+Group=<group>
+Environment=/home/<user>
+HOME=/home/<user>
+WorkingDirectory=/home/<user>
 
-PIDFile=/home/vncuser/.vnc/%H:%i.pid
-ExecStartPre=-/usr/bin/vncserver -kill :%i > /dev/null 2>&1 || :
-#ExecStart=/usr/bin/vncserver -fg -geometry 1280x720 -localhost no :%i
-ExecStart=/usr/bin/vncserver -geometry 1920x1080 -depth 24 -localhost no :%i
-ExecStop=/usr/bin/vncserver -kill :%i > /dev/null 2>&1 || :
+PIDFile=/home/<user>/.vnc/%H:<port>.pid
+ExecStartPre=-/usr/bin/vncserver -kill :<port> > /dev/null 2>&1 || :
+ExecStart=/usr/bin/vncserver -geometry 1920x1080 -depth 24 -localhost no :<port>
+ExecStop=/usr/bin/vncserver -kill :<port> > /dev/null 2>&1 || :
 
 [Install]
 WantedBy=multi-user.target
 ```
 
 
-# create passwd
+# create user 
 ```bash
-sudo adduser vncuser
-sudo su - vncuser vncpasswd
+sudo adduser <username>
+sudo su - <username> vncpasswd
+# delete user
+sudo userdel -r <username>
 ```
+# and then do the same setting from "set xstartup"
