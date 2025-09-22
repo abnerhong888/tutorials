@@ -28,7 +28,8 @@ exec startxfce4
 ```bash
 sudo vi /etc/systemd/system/vncserver_vncuser@.service
 sudo systemctl daemon-reload
-
+sudo systemctl start vncserver_vncuser@<port>.service
+# then you can 
 ```
 
 ```
