@@ -42,7 +42,10 @@ xrandr --addmode VNC-0 "3840x2400_60.00"
 ```
 
 # set service, this is the templeate
-**you got to change <user> to your username**
+
+you got to change
+<user> to your username
+<port> port you want to 
 ```bash
 sudo vi /etc/systemd/system/vncserver_<user>.service
 sudo systemctl daemon-reload
