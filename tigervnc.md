@@ -3,12 +3,12 @@
 sudo apt install tigervnc-standalone-server xfce4 xfce4-goodies
 ```
 
-# create vncuser
+# create passwd
 ```bash
-sudo adduser vncuser
-sudo su - vncuser vncpasswd
+# it will automaticall create folder at ~/.vnc
+vncpasswd
 ```
-# set xstartup in user
+# set xstartup
 ```bash
 touch ~/.vnc/xstartup
 chmod +x ~/.vnc/xstartup
@@ -41,9 +41,10 @@ xrandr --addmode VNC-0 "3840x2160_60.00"
 xrandr --addmode VNC-0 "3840x2400_60.00"
 ```
 
-# set service, this is for [vncuser]
+# set service, this is the templeate
+*** you got to change <user> to your username***
 ```bash
-sudo vi /etc/systemd/system/vncserver_vncuser@.service
+sudo vi /etc/systemd/system/vncserver_<user>.service
 sudo systemctl daemon-reload
 sudo systemctl start vncserver_vncuser@<port>.service
 # then you can use vncviewer to connect <ip:port>
@@ -76,4 +77,11 @@ ExecStop=/usr/bin/vncserver -kill :%i > /dev/null 2>&1 || :
 
 [Install]
 WantedBy=multi-user.target
+```
+
+
+# create passwd
+```bash
+sudo adduser vncuser
+sudo su - vncuser vncpasswd
 ```
