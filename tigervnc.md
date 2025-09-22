@@ -29,7 +29,11 @@ exec startxfce4
 sudo vi /etc/systemd/system/vncserver_vncuser@.service
 sudo systemctl daemon-reload
 sudo systemctl start vncserver_vncuser@<port>.service
-# then you can 
+# then you can use vncviewer to connect <ip:port>
+
+# if error is -> unable to contact settings server Failed to execute child process "dbus-lanuch" (No such file or directory)
+sudo apt install dbus-x11
+
 ```
 
 ```
