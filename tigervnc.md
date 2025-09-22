@@ -24,9 +24,9 @@ unset DBUS_SESSION_BUS_ADDRESS
 ################################
 exec startxfce4
 ```
-# super user to set service
+# set service, this is for [vncuser]
 ```bash
-sudo vi /etc/systemd/system/vncserver@.service
+sudo vi /etc/systemd/system/vncserver_vncuser@.service
 sudo systemctl daemon-reload
 
 ```
@@ -38,15 +38,15 @@ After=syslog.target network.target
 
 [Service]
 Type=forking
-User=<user>
-#PAMName=login
-Group=<group>
-Environment=/home/<user>
-HOME=/home/<user>
-WorkingDirectory=/home/<user>
-#PAMName=login
+#set your user name
+User=vncuser
+#set your group
+Group=user
+Environment=/home/vncuser
+HOME=/home/vncuser
+WorkingDirectory=/home/vncuser
 
-PIDFile=/home/<user>/.vnc/%H:%i.pid
+PIDFile=/home/vncuser/.vnc/%H:%i.pid
 ExecStartPre=-/usr/bin/vncserver -kill :%i > /dev/null 2>&1 || :
 #ExecStart=/usr/bin/vncserver -fg -geometry 1280x720 -localhost no :%i
 ExecStart=/usr/bin/vncserver -geometry 1920x1080 -depth 24 -localhost no :%i
