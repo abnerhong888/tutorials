@@ -23,3 +23,7 @@ Host <ip>
   ForwardX11Trusted yes
 
 ```
+# sshd setting config
+```bash
+vi /etc/ssh/sshd_config
+```
