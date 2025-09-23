@@ -10,6 +10,16 @@ ForwardAgent yes
 ForwardX11 yes
 ForwardX11Trusted yes
 
-# add display var in to server .bashrc
-export DISPLAY="localhost:10.0"
+```
+
+# also can add config in .ssh
+```bash
+vi ~/.ssh/config
+Host <ip>
+  HostName <ip>
+  User <user>
+  ForwardAgent yes
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 ```
