@@ -226,7 +226,8 @@ git reset --hard <ID> -> ID you want to restore
 ```
 ## -- git revert
 ```
-#Just revert to specific command id, didn't change any histroy
+#Just revert to specific commit id, didn't change any histroy
+# revert all changes to current file from the commit id
 git revert <ID>
 ```
 ## -- git clean
