@@ -4,10 +4,10 @@
 sudo vi /etc/systemd/system/barrier.service
 ```
 ```
-<user> user name  
-<gorup> group name  
-<port> display port  
-<server ip> server ip  
+<user> user name
+<gorup> group name
+<port> display port "echo $DISPLAY"
+<server ip> server ip
 ```
 ```[Unit]
 Description=Barrier Service
