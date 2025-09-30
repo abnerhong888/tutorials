@@ -40,7 +40,7 @@ git difftool commit1 commit2
 Set git log format
 ```bash
 git config --global alias.lg "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h%Creset -%Cgreen(%ad)%Creset %C(blue)<%an>%Creset %C(auto)%d%Creset %s'"
-#unset
+# unset
 git config --global --unset alias.lg
 ```
 
@@ -209,15 +209,26 @@ git restore --source=<ID> file.txt -> restore specific file with commited
 git restore --source=HEAD~1 file.txt
 git restore --staged file.txt -> restroe staged file to working file
 ```
+## -- git reflog
+```bash
+# list all commit history
+git reflog
+```
 ## -- git reset
 ```bash
-#Just remove the last commit (keep the changes as uncommitted)
+# Just remove the last commit (keep the changes as uncommitted)
 git reset --soft <ID>
-#Remove the last commit and also discard changes
+# Remove the last commit and also discard changes
 git reset --hard <ID> 
 # if you wwant to restore the commit which deleted
 git reflog
 git reset --hard <ID> -> ID you want to restore
+```
+## -- git revert
+```
+# Just revert to specific commit id, didn't change any histroy
+# revert all changes to current file from the commit id and creates a new commit
+git revert <ID>
 ```
 ## -- git clean
 ```bash
