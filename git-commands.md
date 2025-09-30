@@ -209,6 +209,11 @@ git restore --source=<ID> file.txt -> restore specific file with commited
 git restore --source=HEAD~1 file.txt
 git restore --staged file.txt -> restroe staged file to working file
 ```
+## -- git reflog
+```bash
+#list all commit history
+git reflog
+```
 ## -- git reset
 ```bash
 #Just remove the last commit (keep the changes as uncommitted)
@@ -218,6 +223,11 @@ git reset --hard <ID>
 # if you wwant to restore the commit which deleted
 git reflog
 git reset --hard <ID> -> ID you want to restore
+```
+## -- git revert
+```
+#Just revert to specific command id, didn't change any histroy
+git revert <ID>
 ```
 ## -- git clean
 ```bash
