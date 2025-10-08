@@ -96,6 +96,8 @@ git commit -m "your comment message"
 git commit -> without -m "message" it will open editor or use shell to type your change message
 git commit -a -> commit all modified file
 git commit -am "your message"
+# modify the last commit message
+git commit --amend -m "Your new commit message"
 ```
 
 # 5. GitHub or XXX cloud server
