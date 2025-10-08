@@ -263,6 +263,13 @@ gitk origin/<branch name>
 gitk main origin/main
 ```
 
+## -- git push
+```bash
+# push specific commit id in local commit to remote
+# <branch> ex: main
+git push origin <commit-id>:<branch>
+```
+
 ## -- git rebase
 this can make sure git history are all in the same line
 
