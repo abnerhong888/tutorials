@@ -127,6 +127,7 @@
   # program analysis tool
   valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./your_program
   valgrind --tool=callgrind ./your_program
+  # gui show the tree
   kcachegrind callgrind.out.<pid>
 
   # performance analysis tool
