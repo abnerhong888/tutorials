@@ -125,7 +125,10 @@
 # -- profiling
 ```bash
   # program analysis tool
-  valgrind ...
+  valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./your_program
+  valgrind --tool=callgrind ./your_program
+  kcachegrind callgrind.out.<pid>
+
   # performance analysis tool
   perf record ./your_program
   perf report perf.data
