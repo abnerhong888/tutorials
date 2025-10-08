@@ -268,6 +268,10 @@ git reset --hard <ID>
 # if you wwant to restore the commit which deleted
 git reflog
 git reset --hard <ID> -> ID you want to restore
+
+# unstage file
+git reset
+git reset <file>
 ```
 ## -- git revert
 ```
