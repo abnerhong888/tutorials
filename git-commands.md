@@ -96,8 +96,6 @@ git commit -m "your comment message"
 git commit -> without -m "message" it will open editor or use shell to type your change message
 git commit -a -> commit all modified file
 git commit -am "your message"
-# modify the last commit message
-git commit --amend -m "Your new commit message"
 ```
 
 # 5. GitHub or XXX cloud server
@@ -162,7 +160,52 @@ git rebase -i <commitID>
 
 ```
 
-# 10. Others
+# 10. Change commit message
+```bash
+# modify the last commit message
+git commit --amend -m "Your new commit message"
+# older commit message
+git rebase -i <commit id>
+
+pick 123abc First commit
+reword 456def Second commit
+pick 789ghi Third commit
+
+or
+
+pick 123abc First commit
+edit 456def Second commit
+pick 789ghi Third commit
+
+git commit --amend -m "Your new commit message"
+git rebase --continue
+
+```
+
+# 11. Change commit date
+```bash
+# modify the last commit date, --date="YYYY-MM-DD HH:MM:SS" 
+git commit --amend --no-edit --date="2025-10-08 14:30:00"
+git commit --amend --no-edit --date=now
+# older commit date
+git rebase -i <commit id>
+
+pick 123abc First commit
+edit 456def Second commit
+pick 789ghi Third commit
+
+git commit --amend --no-edit --date="2025-10-08 14:30:00"
+git rebase --continue
+```
+
+# 12. push only specific local commit 
+```bash
+# push specific commit id in local commit to remote
+# <branch> ex: main
+git push origin <commit-id>:<branch>
+```
+
+# 13. Others
 
 ## -- git status
 ```bash
@@ -261,13 +304,6 @@ git stash pop
 gitk <filename>
 gitk origin/<branch name>
 gitk main origin/main
-```
-
-## -- git push
-```bash
-# push specific commit id in local commit to remote
-# <branch> ex: main
-git push origin <commit-id>:<branch>
 ```
 
 ## -- git rebase
