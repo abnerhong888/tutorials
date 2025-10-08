@@ -59,7 +59,7 @@ git config -h -> quick help
 
 Type it in your working folder
 ```bash
-git init
+git --bare init
 ```
 
 # 3. File Add command
@@ -160,7 +160,52 @@ git rebase -i <commitID>
 
 ```
 
-# 10. Others
+# 10. Change commit message
+```bash
+# modify the last commit message
+git commit --amend -m "Your new commit message"
+# older commit message
+git rebase -i <commit id>
+
+pick 123abc First commit
+reword 456def Second commit
+pick 789ghi Third commit
+
+or
+
+pick 123abc First commit
+edit 456def Second commit
+pick 789ghi Third commit
+
+git commit --amend -m "Your new commit message"
+git rebase --continue
+
+```
+
+# 11. Change commit date
+```bash
+# modify the last commit date, --date="YYYY-MM-DD HH:MM:SS" 
+git commit --amend --no-edit --date="2025-10-08 14:30:00"
+git commit --amend --no-edit --date=now
+# older commit date
+git rebase -i <commit id>
+
+pick 123abc First commit
+edit 456def Second commit
+pick 789ghi Third commit
+
+git commit --amend --no-edit --date="2025-10-08 14:30:00"
+git rebase --continue
+```
+
+# 12. push only specific local commit 
+```bash
+# push specific commit id in local commit to remote
+# <branch> ex: main
+git push origin <commit-id>:<branch>
+```
+
+# 13. Others
 
 ## -- git status
 ```bash
@@ -223,6 +268,10 @@ git reset --hard <ID>
 # if you wwant to restore the commit which deleted
 git reflog
 git reset --hard <ID> -> ID you want to restore
+
+# unstage file
+git reset
+git reset <file>
 ```
 ## -- git revert
 ```
@@ -250,8 +299,14 @@ git stash push -u -m "stash message"
 # list
 git stash list
 
-# pop out
-git stash pop
+# apply and keep in stash
+git stash apply stash@{n}
+
+# pop out and delete in stash
+git stash pop stash@{0}
+
+# delete stash
+git stash drop stash@{0}
 ```
 
 ## -- gitk
