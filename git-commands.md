@@ -59,7 +59,7 @@ git config -h -> quick help
 
 Type it in your working folder
 ```bash
-git init
+git --bare init
 ```
 
 # 3. File Add command
