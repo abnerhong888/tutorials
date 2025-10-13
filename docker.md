@@ -60,6 +60,9 @@ docker attach <container_name>
 # stop container
 docker stop <container_name>
 
+# rename container name
+docker rename <old name> <new name>
+
 # copy data from docker
 ```bash
 docker cp <container_id_or_name>:/path/in/container /path/on/host
