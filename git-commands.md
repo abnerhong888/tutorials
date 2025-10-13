@@ -299,8 +299,14 @@ git stash push -u -m "stash message"
 # list
 git stash list
 
-# pop out
-git stash pop
+# apply and keep in stash
+git stash apply stash@{n}
+
+# pop out and delete in stash
+git stash pop stash@{0}
+
+# delete stash
+git stash drop stash@{0}
 ```
 
 ## -- gitk
