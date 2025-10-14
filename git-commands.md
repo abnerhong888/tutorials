@@ -307,6 +307,10 @@ git stash pop stash@{0}
 
 # delete stash
 git stash drop stash@{0}
+
+# show stash
+git stash show <stash id> # briefly
+git stash show -p <stash id> # detail
 ```
 
 ## -- gitk
