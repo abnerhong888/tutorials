@@ -388,32 +388,43 @@ git sparse-checkout disable
 ⚠️ This only works on Git 2.25+ (run git --version to check)
 
 
-# 10. Step-by-Step: Use a Local Folder as a Git Remote
+# 14. Step-by-Step: Use a Local Folder as a Git Remote
 
-## 10.1. Create a bare repo (local "remote")
+## 1. Create a bare repo (local "remote")
 
 ```bash
+# Create a bare repo (local "remote")
 mkdir -p /path/to/remote-repo.git
 cd /path/to/remote-repo.git
 git init --bare
-```
-A bare repo has no working files — it's used just for pushing/pulling.
 
-## 10.2. Set the local folder as remote in your project
-Go to your working Git repo (your project):
-
-```bash
+# Set the local folder as remote in your project
 cd /path/to/your/project
 git remote add origin /path/to/remote-repo.git
-```
 
-You can now push and pull to this local "remote":
-```bash
-git pull origin main  # or master, or your branch name
-git push origin main  # or master, or your branch name
-```
+or
 
-You can even clone from it like this:
-```bash
 git clone /path/to/remote-repo.git
+
+```
+
+# 15. reset all commit histroy
+```bash
+# 1. Clone the repo (or cd into it)
+git clone <repo-url>
+cd <repo>
+
+# 2. Create an orphan branch (no history)
+git checkout --orphan latest_branch
+
+# 3. Add all current files
+git add -A
+git commit -am "Initial commit (reset history)"
+
+# 4. Delete old branch and rename
+git branch -D main
+git branch -m main
+
+# 5. Force push to GitHub
+git push -f origin main
 ```
