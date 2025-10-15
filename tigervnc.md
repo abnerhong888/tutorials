@@ -98,3 +98,14 @@ sudo su - <username> vncpasswd
 sudo userdel -r <username>
 ```
 # and then do the same setting from "set xstartup"
+
+# Others
+```bash
+-SecurityTypes VncAuth,TLSVnc
+-SendCutText=0
+-AcceptCutText=1
+-SendPrimary=0
+-SetPrimary=1
+-geometry 1920x1080
+-depth 24
+```
