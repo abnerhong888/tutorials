@@ -22,7 +22,7 @@ inoremap ( ()<ESC>i
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 inoremap [ []<ESC>i
-inoremap {<CR> {<CR>}ko<TAB>
+inoremap {<CR> {<CR>}<ESC>ko<TAB>
 inoremap {{ {}<ESC>i
 
 filetype indent on
