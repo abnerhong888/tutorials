@@ -389,9 +389,6 @@ git sparse-checkout disable
 
 
 # 14. Step-by-Step: Use a Local Folder as a Git Remote
-
-## 1. Create a bare repo (local "remote")
-
 ```bash
 # Create a bare repo (local "remote")
 mkdir -p /path/to/remote-repo.git
