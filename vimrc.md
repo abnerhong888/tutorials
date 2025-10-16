@@ -11,12 +11,13 @@ set cursorline
 set bg=light
 set tabstop=4
 set shiftwidth=4
-set mouse=a
+"set mouse=a
 set ruler
 set backspace=2
 set expandtab
 set hlsearch
 set incsearch
+set clipboard^=unnamed,unnamedplus " for both linux, windows
 
 inoremap ( ()<ESC>i
 inoremap " ""<ESC>i
