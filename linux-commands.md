@@ -109,6 +109,25 @@
   objdump -Slz a.out > log.log
   objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
 ```
+| Flag   | Meaning                                                                     |
+| ------ | --------------------------------------------------------------------------- |
+| **-S** | Intermix **source code** with disassembly (if debugging info is available). |
+| **-l** | Include **line numbers** (from debugging symbols).                          |
+| **-z** | Don't skip zero section headers (show all).                                 |
+| **-a** | Display **archive header information**.                                     |
+| **-f** | Display **file header** information.                                        |
+| **-p** | Display **private headers** (processor-specific info).                      |
+| **-h** | Display **section headers**.                                                |
+| **-x** | Display **all headers** (same as `-a -f -h -p -r -t`).                      |
+| **-g** | Display **debugging information** (DWARF, etc).                             |
+| **-e** | Display **debugging entries** (extended DWARF details).                     |
+| **-G** | Display **symbol debugging information**.                                   |
+| **-W** | Display **DWARF public names** and other DWARF info.                        |
+| **-t** | Display **symbol table**.                                                   |
+| **-T** | Display **dynamic symbol table** (for ELF binaries).                        |
+| **-r** | Display **relocation entries**.                                             |
+| **-R** | Display **dynamic relocations**.                                            |
+| **-s** | Display **full contents of all sections** (hex + ASCII).                    |
 
 # -- objcopy
 ```bash
