@@ -108,6 +108,7 @@
   # dump all symbol and assembly
   objdump -Slz a.out > log.log
   objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
+  objdump -Shxd a.out > 1_ALL.log
 ```
 | Flag   | Meaning                                                                     |
 | ------ | --------------------------------------------------------------------------- |
@@ -128,6 +129,7 @@
 | **-r** | Display **relocation entries**.                                             |
 | **-R** | Display **dynamic relocations**.                                            |
 | **-s** | Display **full contents of all sections** (hex + ASCII).                    |
+| **-d** | Disassemble all sections that contain machine instructions.                 |
 
 # -- objcopy
 ```bash
