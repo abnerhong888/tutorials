@@ -110,8 +110,7 @@
   objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
   objdump -Shxd a.out > 1_ALL.log
 ```
-## General info
-| Flag | Meaning                                              |
+| Flag | Meaning(General info)                                |
 | ---- | ---------------------------------------------------- |
 | `-f` | File header info (format, arch, entry point)         |
 | `-h` | Section headers (.text, .data, etc.)                 |
@@ -121,8 +120,7 @@
 | `-i` | Show supported formats/architectures                 |
 | `-V` | Version info                                         |
 | `-H` | Help message                                         |
-## Disassembly
-| Flag       | Meaning                                    |
+| Flag       | Meaning(Disassembly)                       |
 | ---------- | ------------------------------------------ |
 | `-d`       | Disassemble executable sections            |
 | `-D`       | Disassemble all sections                   |
