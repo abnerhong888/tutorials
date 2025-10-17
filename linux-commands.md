@@ -110,63 +110,54 @@
   objdump -SlzafphxgeGWtTrRs a.out > 1_ALL.log
   objdump -Shxd a.out > 1_ALL.log
 ```
-| Option(s)    | Long form / alias                | What it does                                                                                                                                      |
-| ------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-a`         | `--archive-headers`              | If the input is an archive, show archive member headers. ([Massachusetts Institute of Technology][1])                                             |
-| `-b bfdname` | `--target=bfdname`               | Force the object format (bfd backend) to `bfdname`. ([Massachusetts Institute of Technology][1])                                                  |
-| `-C [style]` | `--demangle[=style]`             | Demangle (decode) C++ symbol names (e.g. turn `Foo::bar` from mangled). ([Sanfoundry][2])                                                         |
-| `-d`         | `--disassemble`                  | Disassemble sections that are expected to contain code. ([Massachusetts Institute of Technology][1])                                              |
-| `-D`         | `--disassemble-all`              | Disassemble *all* sections, even ones not marked as executable. ([Sanfoundry][2])                                                                 |
-| `-e`         | —                                | Show extended debugging entries (DWARF). ([man7.org][3])                                                                                          |
-| `-f`         | `--file-headers`                 | Print the file header (format, architecture, flags, start address). ([Linux Documentation][4])                                                    |
-| `-g`         | `--debugging`                    | Display debugging information (DWARF, etc.). ([man7.org][3])                                                                                      |
-| `-G`         | `--stabs`                        | Show STABS debugging symbol info (older debug format). ([Massachusetts Institute of Technology][1])                                               |
-| `-h`         | `--section-headers`, `--headers` | List the section headers (.text, .data, etc.) with sizes, addresses. ([Linux Documentation][4])                                                   |
-| `-H`         | `--help`                         | Display help / usage summary. ([Sanfoundry][2])                                                                                                   |
-| `-i`         | `--info`                         | Show supported object formats / architectures. ([Sanfoundry][2])                                                                                  |
-| `-j name`    | `--section=name`                 | Restrict operations to a specific section (e.g. `-j .text`). ([Sanfoundry][2])                                                                    |
-| `-l`         | `--line-numbers`                 | Include source-file line numbers (when disassembling or showing relocations). ([Sanfoundry][2])                                                   |
-| `-m arch`    | `--architecture=arch`            | Force a particular architecture for disassembly (if ambiguous). ([Sanfoundry][2])                                                                 |
-| `-M options` | `--disassembler-options=options` | Pass architecture-specific options to disassembler (e.g. Intel vs AT&T syntax). ([Sanfoundry][2])                                                 |
-| `-p`         | `--private-headers`              | Show object-format specific (private) header info (e.g. program headers in ELF). ([Sanfoundry][2])                                                |
-| `-r`         | `--reloc`                        | Show relocation entries. ([Linux Documentation][4])                                                                                               |
-| `-R`         | `--dynamic-reloc`                | Show dynamic relocation entries (for shared libraries). ([man7.org][3])                                                                           |
-| `-s`         | `--full-contents`                | Dump full contents of sections (hex + ASCII) instead of skipping. ([Massachusetts Institute of Technology][1])                                    |
-| `-S`         | `--source`                       | Intermix source code with disassembly (if debug info present). ([Linux Documentation][4])                                                         |
-| `-t`         | `--syms`                         | List the symbol table. ([Sanfoundry][2])                                                                                                          |
-| `-T`         | `--dynamic-syms`                 | List dynamic symbol table (for shared/dynamic objects). ([man7.org][3])                                                                           |
-| `-w`         | `--wide`                         | Don’t wrap or truncate output; useful on wide terminals. ([man7.org][3])                                                                          |
-| `-x`         | `--all-headers`                  | Show *all* header-related info: file headers, section headers, relocations, symbols, etc. It’s equivalent to `-a -f -h -p -r -t`. ([man7.org][3]) |
-| `-z`         | `--disassemble-zeroes`           | Do *not* skip blocks of zero bytes when disassembling — treat zero bytes as instructions/data. ([man7.org][3])                                    |
-| `-Z`         | `--decompress`                   | Decompress compressed sections before dumping their contents (used along with `-s`). ([man7.org][3])                                              |
-| `-V`         | `--version`                      | Print version of objdump and exit. ([man7.org][3])                                                                                                |
-| `@file`      | —                                | Read options from `file` (each whitespace-separated). ([man7.org][3])                                                                             |
+## General info
+| Flag | Meaning                                              |
+| ---- | ---------------------------------------------------- |
+| `-f` | File header info (format, arch, entry point)         |
+| `-h` | Section headers (.text, .data, etc.)                 |
+| `-x` | All headers (file + section + symbols + relocations) |
+| `-a` | Archive headers                                      |
+| `-p` | Private (format-specific) headers                    |
+| `-i` | Show supported formats/architectures                 |
+| `-V` | Version info                                         |
+| `-H` | Help message                                         |
+## Disassembly
+| Flag       | Meaning                                    |
+| ---------- | ------------------------------------------ |
+| `-d`       | Disassemble executable sections            |
+| `-D`       | Disassemble all sections                   |
+| `-S`       | Include source code (if debug info exists) |
+| `-l`       | Show source line numbers                   |
+| `-M intel` | Use Intel syntax instead of AT&T           |
+| `-z`       | Don’t skip zero bytes when disassembling   |
+## Data & contents
+| Flag        | Meaning                                        |
+| ----------- | ---------------------------------------------- |
+| `-s`        | Dump full contents of all sections (hex/ASCII) |
+| `-Z`        | Decompress compressed sections                 |
+| `-j <name>` | Show only specific section (e.g. `.text`)      |
+## Symbols & relocations
+| Flag | Meaning              |
+| ---- | -------------------- |
+| `-t` | Symbol table         |
+| `-T` | Dynamic symbol table |
+| `-r` | Relocation entries   |
+| `-R` | Dynamic relocations  |
+## Debug info
+| Flag | Meaning                     |
+| ---- | --------------------------- |
+| `-g` | Show debugging info (DWARF) |
+| `-e` | Extended debug entries      |
+| `-G` | Old STABS debug info        |
+| `-W` | DWARF public names, etc.    |
+## Other
+| Flag        | Meaning               |
+| ----------- | --------------------- |
+| `-b <bfd>`  | Force file format     |
+| `-m <arch>` | Force architecture    |
+| `-C`        | Demangle C++ names    |
+| `-w`        | Don’t wrap long lines |
 
-[1]: https://web.mit.edu/gnu/doc/html/binutils_5.html?utm_source=chatgpt.com "The GNU Binary Utilities - objdump - MIT"
-[2]: https://www.sanfoundry.com/objdump-command-usage-examples-in-linux/?utm_source=chatgpt.com "10+ objdump Command Examples in Linux - Sanfoundry"
-[3]: https://www.man7.org/linux/man-pages/man1/objdump.1.html?utm_source=chatgpt.com "objdump(1) - Linux manual page - Michael Kerrisk"
-[4]: https://linux.die.net/man/1/objdump?utm_source=chatgpt.com "objdump(1): info from object files - Linux man page"
-
-| Flag   | Meaning                                                                     |
-| ------ | --------------------------------------------------------------------------- |
-| **-S** | Intermix **source code** with disassembly (if debugging info is available). |
-| **-l** | Include **line numbers** (from debugging symbols).                          |
-| **-z** | Don't skip zero section headers (show all).                                 |
-| **-a** | Display **archive header information**.                                     |
-| **-f** | Display **file header** information.                                        |
-| **-p** | Display **private headers** (processor-specific info).                      |
-| **-h** | Display **section headers**.                                                |
-| **-x** | Display **all headers** (same as `-a -f -h -p -r -t`).                      |
-| **-g** | Display **debugging information** (DWARF, etc).                             |
-| **-e** | Display **debugging entries** (extended DWARF details).                     |
-| **-G** | Display **symbol debugging information**.                                   |
-| **-W** | Display **DWARF public names** and other DWARF info.                        |
-| **-t** | Display **symbol table**.                                                   |
-| **-T** | Display **dynamic symbol table** (for ELF binaries).                        |
-| **-r** | Display **relocation entries**.                                             |
-| **-R** | Display **dynamic relocations**.                                            |
-| **-s** | Display **full contents of all sections** (hex + ASCII).                    |
-| **-d** | Disassemble all sections that contain machine instructions.                 |
 
 # -- objcopy
 ```bash
