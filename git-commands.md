@@ -29,19 +29,22 @@ git config --global --unset core.editor
 Set vscode as a default diff tool
 ```bash
 git config --global diff.tool vscode
-git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+git config --global difftool.vscode.cmd 'code --wait --new-window --diff $LOCAL $REMOTE'
 **make sure command is right in .gitconfig**
 git config --global -e
 # how to use
 git difftool <file>
 git difftool commit1 commit2
+git difftool --dir-diff <commit id1> <commit id2>
 ```
 
 Set git log format
 ```bash
 git config --global alias.lg "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h%Creset -%Cgreen(%ad)%Creset %C(blue)<%an>%Creset %C(auto)%d%Creset %s'"
+git config --global alias.vsdiff "difftool --dir-diff"
 # unset
 git config --global --unset alias.lg
+git config --global --unset alias.svdiff
 ```
 
 Setting the end of line format, ex. windows is \r\n, mac is \n
@@ -125,6 +128,7 @@ main.log
 ```bash
 git difftool
 git difftool --staged
+git difftool --dir-diff <commit id1> <commit id2>
 ```
 
 # 8. Git branch
