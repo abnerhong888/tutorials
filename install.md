@@ -17,6 +17,7 @@ git graph
 c++ inteligence
 cmake tools
 Hex Editor
+vscode neovim
 
 # settings.josn
 "workbench.editor.wrapTabs": true,
@@ -27,7 +28,8 @@ clangd
 cmake tools
 Hex Editor
 CodeLLDB
-
+vscode neovim
+git graph
 # settings.josn
 "workbench.editor.wrapTabs": true,
 ```
