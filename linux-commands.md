@@ -71,7 +71,7 @@
 # -- ld
 ```bash
   # Shows shared libraries used by a binary
-  ldd <name>.so
+  ld <name>.so
 ```
 
 # -- nm
@@ -151,6 +151,16 @@
 ```bash
   # redefine symbol in static library
   objcopy --redefine-sym <ori_symbol>=<new_symbol> file.a
+```
+```bash
+# extract .a files
+ar -x f1.a --output <folder>
+ar -x f2.a --output <folder>
+# merge all .o files
+ld -r -o <folder>/libmerged.o <folder>/*.o
+ar -rcs libtest.a lib/libmerged.o
+# redefine symbol
+objcopy --redefine-sym <ori_symbol>=<new_symbol> libtest.a
 ```
 
 # -- c++filt
