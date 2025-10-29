@@ -33,4 +33,7 @@ vscode neovim
 git graph
 # settings.josn
 "workbench.editor.wrapTabs": true,
+"clangd.arguments": [
+            "--compile-commands-dir=<compile_commands.json dir>"
+    ],
 ```
