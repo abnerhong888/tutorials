@@ -17,6 +17,7 @@ git graph
 c++ inteligence
 cmake tools
 Hex Editor
+Remote SSH
 vscode neovim
 
 # settings.josn
