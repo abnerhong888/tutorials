@@ -27,3 +27,8 @@ Host <ip>
 ```bash
 vi /etc/ssh/sshd_config
 ```
+
+# specific display port to execute
+```bash
+DISPLAY=:<port> <program>
+```
