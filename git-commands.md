@@ -1,5 +1,4 @@
 This is a tutorial for Git command  
-Also for practicing markdown language 
 ===
 
 # 0. Git
@@ -234,6 +233,7 @@ git log
 git log --oneline --reverse
 # git graph with local main and remote main
 git log --oneline --graph --decorate --all --branches=main
+git log --follow --patch -- <filename>
 gitk main origin/main
 ```
 
