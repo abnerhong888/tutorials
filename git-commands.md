@@ -234,6 +234,7 @@ git log
 git log --oneline --reverse
 # git graph with local main and remote main
 git log --oneline --graph --decorate --all --branches=main
+git log --follow --patch -- <filename>
 gitk main origin/main
 ```
 
