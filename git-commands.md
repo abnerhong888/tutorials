@@ -1,5 +1,4 @@
 This is a tutorial for Git command  
-Also for practicing markdown language 
 ===
 
 # 0. Git
