@@ -23,6 +23,10 @@ set-option -g set-clipboard on
 bind -T copy-mode-vi y send -X copy-pipe-and-cancel "xclip -selection clipboard -in"
 bind -T copy-mode-vi Enter send -X copy-pipe-and-cancel "xclip -selection clipboard -in"
 
+# status bar color
+# set -g status-style "bg=black"
+
+
 ```
 # 3. how to use
 ```bash
