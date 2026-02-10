@@ -107,3 +107,6 @@ http_access deny all
 
 sudo systemctl restart squid.service
 
+
+sudo apt -o Acquire::http::Proxy="http://user:pass@proxy-ip:port" update
+
