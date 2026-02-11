@@ -39,7 +39,7 @@ WantedBy=default.target
 ```
 ```
 [Unit]
-Description=Barrier Servic
+Description=Barrier Service
 After=network.targe
 
 [Service]
