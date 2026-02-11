@@ -40,7 +40,7 @@ WantedBy=default.target
 ```
 [Unit]
 Description=Barrier Service
-After=network.targe
+After=network.target
 
 [Service]
 ExecStart=/usr/bin/barriers --no-daemon --display :<port> --disable-crypto --name <monitor name>  --config <barrier config path> 
