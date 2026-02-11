@@ -1,7 +1,7 @@
 # Client
 
 ```bash
-sudo vi /etc/systemd/system/barrier.service
+sudo vim /etc/systemd/system/barrier.service
 ```
 ```
 <user> user name
@@ -30,8 +30,14 @@ WantedBy=default.target
 
 #Server
 ```
-<user> user name
-<gorup> group name
+# !!!!I put this into user space systemd, so no need user and group
+# and you can do is
+# systemctl --user daemon-reload
+# systemctl --user start/stop/status/enable xxx.service
+
+vim /home/user/.config/systemd/user/barrier.service
+```
+```
 <port> display port "echo $DISPLAY"
 
 <monitor name> I set to "main"
@@ -45,8 +51,6 @@ After=network.target
 [Service]
 ExecStart=/usr/bin/barriers --no-daemon --display :<port> --disable-crypto --name <monitor name>  --config <barrier config path> 
 Restart=on-failure
-User=<user>
-Group=<group>
 Environment=DISPLAY=:<port>
 
 [Install]
