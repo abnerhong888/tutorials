@@ -11,7 +11,8 @@ sudo vi /etc/systemd/system/barrier.service
 
 <monitor name> I set to "left"
 ```
-```[Unit]
+```
+[Unit]
 Description=Barrier Service
 After=network.target
 
