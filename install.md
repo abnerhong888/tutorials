@@ -19,6 +19,7 @@ cmake tools
 Hex Editor
 Remote SSH
 vscode neovim
+pdfmore
 
 # settings.josn
 "workbench.editor.wrapTabs": true,
