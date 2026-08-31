@@ -15,3 +15,18 @@
 2. scrcpy : tablet remote control on PC
 3. fcitx5 : chweing and pinyin
 4. KDE Connect
+5. virt-manager : for run virtual machine
+
+# windows install on another SSD, make it both of boot and vm can work
+1. Disable Fast Startup:
+  - Open the Start Menu, search for cmd, right-click it, and select Run as Administrator.
+  - Run the following command:
+
+```dos
+powercfg /hibernate off
+```
+2. make Omarchy limine bootloader can add option for windows
+Disable BitLocker (Device Encryption)
+- Go to Settings $\rightarrow$ Privacy & Security $\rightarrow$ Device Encryption / BitLocker and toggle it Off.
+- Check out the [Omarchy Guide](https://omarchy.org/manual/dual-boot-install/#:~:text=Bitlocker%20%23%20It's%20important%20to%20note%20that,to%20decrypt%20the%20drive.%20%E2%86%90%20Omarchy%20on).
+
