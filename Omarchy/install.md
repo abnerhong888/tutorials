@@ -6,7 +6,7 @@
 4. wayvnc
 5. chrome
 6. vscode
-7. xrdp
+7. 
 8. steam
 9. sunshine : gaming remotely server
 10. windows VM : dual boot system
