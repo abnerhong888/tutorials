@@ -31,5 +31,5 @@ return {
 ```
 ## set kitty config by the link
 ```bash
-nvim …/.config/kitty/kitty.conf
+nvim ~/.config/kitty/kitty.conf
 ```
