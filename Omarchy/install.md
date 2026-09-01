@@ -2,13 +2,15 @@
 ## original exist in the os
 1. tailscale
 2. kitty
-3. chrome
-4. vscode
-5. xrdp
-6. steam
-7. sunshine : gaming remotely server
-8. windows VM : dual boot system
-9. Lutris
+3. sshd
+4. wayvnc
+5. chrome
+6. vscode
+7. xrdp
+8. steam
+9. sunshine : gaming remotely server
+10. windows VM : dual boot system
+11. Lutris
 
 ## others
 1. crow translate
