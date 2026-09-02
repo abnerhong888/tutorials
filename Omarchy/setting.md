@@ -16,7 +16,7 @@ sudo pacman -Sy wayvnc
 ~/.config/hypr/autostart.lua
 ```
 ```lua
-o.launch_on_start("wayvnc")
+o.launch_on_start("wayvnc --rebder-cursor &")
 ```
 # kitty
 ## lazyvim scrollback setting
