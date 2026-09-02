@@ -11,7 +11,7 @@ Session=hyprland
 ```bash
 sudo pacman -Sy wayvnc
 ```
-## auto start
+### auto start
 ```bash
 ~/.config/hypr/autostart.lua
 ```
@@ -19,7 +19,7 @@ sudo pacman -Sy wayvnc
 o.launch_on_start("wayvnc --render-cursor &")
 ```
 # kitty
-## lazyvim scrollback setting
+### lazyvim scrollback setting
 ```bash
 nvim ~/.config/nvim/lua/plugins/kitty.lua
 ```
@@ -29,7 +29,7 @@ return {
 ...
 }
 ```
-## set kitty config by the link
+### set kitty config by the link
 ```bash
 nvim ~/.config/kitty/kitty.conf
 ```
