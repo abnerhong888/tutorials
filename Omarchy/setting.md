@@ -33,7 +33,10 @@ return {
 ```bash
 nvim ~/.config/kitty/kitty.conf
 ```
-
+# sunshine
+```bash
+omarchy install service sunshine
+```
 # How to Mount a Windows Drive (NTFS) in Omarchy Linux
 
 ### 1. Identify Your Windows Partition
