@@ -41,7 +41,7 @@ omarchy install service sunshine
 ```bash
 sudo pacman -S pavucontrol qpwgraph
 ```
-# How to Mount a Windows Drive (NTFS) in Omarchy Linux
+# How to Mount a Windows Drive (NTFS)
 
 ### 1. Identify Your Windows Partition
 Run the following command to locate your Windows NTFS partition and note its **UUID**:
