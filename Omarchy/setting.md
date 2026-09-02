@@ -37,6 +37,10 @@ nvim ~/.config/kitty/kitty.conf
 ```bash
 omarchy install service sunshine
 ```
+# audio control with graphical
+```bash
+sudo pacman -S pavucontrol qpwgraph
+```
 # How to Mount a Windows Drive (NTFS) in Omarchy Linux
 
 ### 1. Identify Your Windows Partition
