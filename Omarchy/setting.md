@@ -41,6 +41,11 @@ omarchy install service sunshine
 ```bash
 sudo pacman -S pavucontrol qpwgraph
 ```
+
+# fcitx5
+```bash
+omarchy pkg add fcitx5 fcitx5-configtool fcitx5-chinese-addons fcitx5-chewing
+```
 # How to Mount a Windows Drive (NTFS)
 
 ### 1. Identify Your Windows Partition
