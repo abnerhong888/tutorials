@@ -18,4 +18,4 @@
 3. fcitx5 : chweing and pinyin
 4. KDE Connect
 5. virt-manager : for run virtual machine
-
+6. pavucontrol
