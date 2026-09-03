@@ -1,6 +1,8 @@
 # wayvnc
 ```bash
 nvim ~/.config/systemd/user/wayvnc.service
+systemctl --user daemon-reload
+systemctl --user enable --now wayvnc.service
 ```
 ```ini
 [Unit]
@@ -27,6 +29,8 @@ WantedBy=graphical-session.target
 # sunshine
 ```bash
 nvim ~/.config/systemd/user/sunshine.service
+systemctl --user daemon-reload
+systemctl --user enable --now sunshine.service
 ```
 
 ```ini
