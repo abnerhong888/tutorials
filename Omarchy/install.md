@@ -6,11 +6,9 @@
 4. wayvnc
 5. chrome
 6. vscode
-7. 
-8. steam
-9. sunshine : gaming remotely server
-10. windows VM : dual boot system
-11. Lutris
+7. steam
+8. sunshine : gaming remotely server
+9. Lutris
 
 ## others
 1. crow translate
