@@ -46,6 +46,20 @@ sudo pacman -S pavucontrol qpwgraph
 ```bash
 omarchy pkg add fcitx5 fcitx5-configtool fcitx5-chinese-addons fcitx5-chewing
 ```
+# Virt-manager
+```bash
+# Step 1: Install virt-manager and QEMU/KVM dependencies
+sudo pacman -S --needed virt-manager qemu-desktop libvirt dnsmasq iptables-nft edk2-ovmf
+
+# Step 2: Enable libvirtd service and assign user permissions
+sudo systemctl enable --now libvirtd.service
+sudo usermod -aG libvirt $USER
+newgrp libvirt
+
+# Step 3: Start and autostart default NAT network for guest internet access
+sudo virsh net-start default
+sudo virsh net-autostart default
+```
 # How to Mount a Windows Drive (NTFS)
 
 ```bash
@@ -66,17 +80,4 @@ UUID=YOUR-WINDOWS-UUID /mnt/<disk name> ntfs3 defaults,uid=1000,gid=1000,exec,no
 
 sudo mount -a
 ```
-# Virt-manager
-```bash
-# Step 1: Install virt-manager and QEMU/KVM dependencies
-sudo pacman -S --needed virt-manager qemu-desktop libvirt dnsmasq iptables-nft edk2-ovmf
 
-# Step 2: Enable libvirtd service and assign user permissions
-sudo systemctl enable --now libvirtd.service
-sudo usermod -aG libvirt $USER
-newgrp libvirt
-
-# Step 3: Start and autostart default NAT network for guest internet access
-sudo virsh net-start default
-sudo virsh net-autostart default
-```
