@@ -5,6 +5,11 @@ apl add docker dockerd docker-compose luci-app-dockerman
 
 # tailscale compose
 ```bash
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
+echo "net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf
+sysctl -p /etc/sysctl.conf
+```
+```bash
 mkdir /tailscale -p
 cd /tailscale
 vim docker-compose.yml
