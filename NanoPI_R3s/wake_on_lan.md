@@ -96,6 +96,12 @@ Because the AX3000T remains in **Router Mode**, WoL magic packets must be forwar
 4. **Power Management Tab:**
    - Check `Allow this device to wake the computer`.
    - Check `Only allow a magic packet to wake the computer`.
+  
+### Linux
+1. might set firewall allow 9/udp
+```bash
+sudo ufw allow 9/udp
+```
 
 ---
 
@@ -110,10 +116,3 @@ Because the AX3000T remains in **Router Mode**, WoL magic packets must be forwar
    - **Port:** `9`
 3. Send packet.
 
-### Option B: Via SSH Command / Shortcuts (Most Reliable)
-Run this command from an iPhone SSH app (or iOS Shortcut SSH action) targeting the NanoPi:
-
-```bash
-docker exec -it tailscale wakeonlan -i 192.168.X.X -p 9 AA:BB:CC:DD:EE:FF
-```
-*(Replace `192.168.X.X` with your AX3000T WAN IP and `AA:BB:CC:DD:EE:FF` with your PC MAC address).*
