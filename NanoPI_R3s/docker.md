@@ -26,7 +26,9 @@ services:
     environment:
       - TS_AUTHKEY=tskey-auth-kXXXXX-XXXXXXXXXXXXXXXXXX # Generate from Tailscale Admin Console
       - TS_STATE_DIR=/var/lib/tailscale
-      - TS_EXTRA_ARGS=--advertise-exit-node
+        # tell tailscale Send traffic intended for local LAN IP addresses
+        # --advertise-routes=192.168.X.0/24 --snat-subnet-routes=true
+      - TS_EXTRA_ARGS=--advertise-exit-node 
       - TS_USERSPACE=false
     volumes:
       - /opt/tailscale-data:/var/lib/tailscale
