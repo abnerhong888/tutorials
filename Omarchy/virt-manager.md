@@ -1,4 +1,4 @@
-# set up windwos on SSD by virt-manager
+# Set up windwos on SSD by virt-manager
 If "Add Boot Option" displays an empty list in OVMF, QEMU is either unable to access the physical block device due to bus/permission issues, or the drive lacks a FAT32 EFI System Partition.
 
 1. **Set Disk Bus to SATA:** virt-manager GUI.
