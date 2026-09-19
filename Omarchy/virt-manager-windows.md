@@ -1,3 +1,9 @@
+# windows setting
+Mandatory Requirements for Dual Boot (Bare-Metal + VM)
+Disable Fast Startup: You must disable Windows Fast Startup (powercfg -h off). If Fast Startup is enabled, Windows leaves the filesystem in a hibernated state when shutting down, causing instant NTFS corruption when booted in the opposite mode.
+
+Disable BitLocker: Turn off BitLocker on drive C:. Switching between your physical motherboard's TPM and QEMU's emulated TPM (swtpm) will trigger BitLocker recovery screens every time you switch boot modes.
+
 # Set up windwos on SSD by virt-manager
 If "Add Boot Option" displays an empty list in OVMF, QEMU is either unable to access the physical block device due to bus/permission issues, or the drive lacks a FAT32 EFI System Partition.
 
