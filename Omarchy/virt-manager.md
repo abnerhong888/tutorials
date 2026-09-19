@@ -1,3 +1,4 @@
+# set up windwos on SSD by virt-manager
 If "Add Boot Option" displays an empty list in OVMF, QEMU is either unable to access the physical block device due to bus/permission issues, or the drive lacks a FAT32 EFI System Partition.
 
 1. **Set Disk Bus to SATA:** virt-manager GUI.
@@ -49,6 +50,8 @@ Examine the output:
 * **If `Disklabel type` is `gpt` and an `EFI System` partition is listed:** The partition exists; ensure it is not corrupted.
 
 *Verification:* `fdisk` output explicitly lists a partition with `EFI System` under the `Type` column.
+
+# Fix virt-manager can not find boot UEFI
 
 Your SSD uses a GPT partition table, but it **does not contain an EFI System Partition (ESP)**. When Windows was originally installed on this drive, its EFI bootloader was written to a different physical drive in your system.
 
