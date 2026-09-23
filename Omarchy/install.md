@@ -3,11 +3,12 @@
 1. tailscale
 2. [kitty][kitty-setup]
 3. [wayvnc][HowToInstall]
-4. chrome
-5. vscode
-6. steam
-7. [sunshine][HowToInstall] : gaming remotely server
-8. [lutris][lutris-setup] : wine container for gaming
+4. [hypr-rdp][HowToInstall]
+5. chrome
+6. vscode
+7. steam
+8. [sunshine][HowToInstall] : gaming remotely server
+9. [lutris][lutris-setup] : wine container for gaming
 
 ## others
 1. [crow translate][HowToInstall] : translate tool
