@@ -1,7 +1,32 @@
 # wayvnc
 ```bash
 sudo pacman -Sy wayvnc
+n ~/.config/wayvnc/config
 ```
+```config
+address=127.0.0.1
+port=5900
+enable_auth=true
+username=user
+password=pass
+```
+# hypr-rdp
+```bash
+yay -S hypr-rdp
+n ~/.config/hypr-rdp/config.toml
+```
+```toml
+username = "user"
+password = "pass"
+fps = 30
+#bind = "0.0.0.0:3389"
+# resolution = "1920x1080"
+# scale = 2
+# output = "DP-1"
+# audio_mode = "mirror"
+# keyboard_layout_policy = "compositor"
+```
+
 # sunshine
 ```bash
 omarchy install service sunshine
