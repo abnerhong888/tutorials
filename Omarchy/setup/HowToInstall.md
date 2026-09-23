@@ -4,7 +4,7 @@ sudo pacman -Sy wayvnc
 n ~/.config/wayvnc/config
 ```
 ```config
-address=127.0.0.1
+address=0.0.0.0
 port=5900
 enable_auth=true
 username=user
@@ -17,10 +17,10 @@ n ~/.config/hypr-rdp/config.toml
 sudo ufw allow 3389/tcp
 ```
 ```toml
+bind = "0.0.0.0:3389"
 username = "user"
 password = "pass"
 fps = 30
-# bind = "0.0.0.0:3389"
 # resolution = "1920x1080"
 # scale = 2
 # output = "DP-1"
