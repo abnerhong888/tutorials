@@ -19,7 +19,7 @@ n ~/.config/hypr-rdp/config.toml
 username = "user"
 password = "pass"
 fps = 30
-#bind = "0.0.0.0:3389"
+# bind = "0.0.0.0:3389"
 # resolution = "1920x1080"
 # scale = 2
 # output = "DP-1"
