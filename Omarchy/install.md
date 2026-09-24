@@ -23,7 +23,7 @@
 
 # Settings
 1. [systemSetting][system-setup]
-
+2. [Plugins][plugins-setup]
 
 [HowToInstall]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/HowToInstall.md
 [spicetify-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/spicetify.md
@@ -32,3 +32,4 @@
 [kitty-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/kitty.md
 [system-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/systemSetting.md
 [sunshine-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/sunshine.md
+[plugins-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/omarchy-plugins.md
