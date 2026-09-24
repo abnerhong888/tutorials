@@ -14,7 +14,6 @@ password=pass
 ```bash
 yay -S hypr-rdp
 n ~/.config/hypr-rdp/config.toml
-sudo ufw allow 3389/tcp
 ```
 ```toml
 bind = "0.0.0.0:3389"
