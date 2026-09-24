@@ -1,5 +1,5 @@
 # create a tablet screen 
-**Automate Display Creation on Connection:** Optional Sunshine automation.
+### **Automate Display Creation on Connection:** Optional Sunshine automation.
 To avoid manually running commands every time you connect:
 ```bash
 n ~/.config/sunshine/tablet_screen.sh
@@ -18,6 +18,7 @@ case "$1" in
         echo "Creating $MONITOR_NAME..."
         hyprctl output create headless "$MONITOR_NAME" && \
         hyprctl keyword monitor "$MONITOR_NAME,$RESOLUTION,$POSITION,$SCALE"
+        sleep 1
         ;;
     undo|remove|stop)
         echo "Removing $MONITOR_NAME..."
@@ -36,3 +37,16 @@ esac
 * **Undo Command:** `home/xxxx/.config/sunshine/tablet_screen.sh undo`
 
 4. Save the application settings.
+
+
+### Set Sunshine to Capture ONLY the Extended Display
+
+If Moonlight is showing your main desktop, Sunshine is capturing the wrong monitor.
+
+1. Open **Sunshine Web UI** (`https://localhost:47990`).
+2. Go to **Configuration** > **Audio/Video**.
+3. Set **Output Name** to:
+```text
+virtual_tablet
+```
+4. Click **Save** and restart Sunshine.
