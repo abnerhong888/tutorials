@@ -7,8 +7,9 @@
 5. chrome
 6. vscode
 7. steam
-8. [sunshine][HowToInstall] : gaming remotely server
-9. [lutris][lutris-setup] : wine container for gaming
+8. [sunshine][HowToInstall] : gaming remotely server  
+    a. [virtual-tablet-screen][sunshine-setup]: virtual tablet screen setup  
+10. [lutris][lutris-setup] : wine container for gaming
 
 ## others
 1. [crow translate][HowToInstall] : translate tool
@@ -31,3 +32,4 @@
 [lutris-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/lutris.md
 [kitty-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/kitty.md
 [system-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/systemSetting.md
+[sunshine-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/sunshine.md
