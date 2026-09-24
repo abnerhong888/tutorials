@@ -12,7 +12,7 @@
 10. [lutris][lutris-setup] : wine container for gaming
 
 ## others
-1. [crow translate][HowToInstall] : translate tool
+1. [pot-desktop][HowToInstall] : translate tool
 2. [scrcpy][HowToInstall] : android tablet remote control on PC
 3. [fcitx5][HowToInstall] : chweing and pinyin
 4. [KDE Connect][HowToInstall] : 
