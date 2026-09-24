@@ -43,10 +43,9 @@ esac
 
 If Moonlight is showing your main desktop, Sunshine is capturing the wrong monitor.
 
-1. Open **Sunshine Web UI** (`https://localhost:47990`).
-2. Go to **Configuration** > **Audio/Video**.
-3. Set **Output Name** to:
+1. Go to **Configuration** > **Audio/Video**.
+2. Set **Output Name** to:
 ```text
 virtual_tablet
 ```
-4. Click **Save** and restart Sunshine.
+3. Click **Save** and restart Sunshine.
