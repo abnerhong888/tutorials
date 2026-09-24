@@ -61,10 +61,6 @@ yay -S idescriptor
 ```bash
 sudo pacman -S scrcpy android-toolssudo pacman -S scrcpy android-tools
 ```
-# pot-desktop
-```bash
-yay -S pot-translation-bin
-```
 # kde connect
 ```bash
 sudo pacman -S kdeconnect
