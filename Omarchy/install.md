@@ -12,15 +12,14 @@
 10. [lutris][lutris-setup] : wine container for gaming
 
 ## others
-1. [pot-desktop][HowToInstall] : translate tool
-2. [scrcpy][HowToInstall] : android tablet remote control on PC
-3. [fcitx5][HowToInstall] : chweing and pinyin
-4. [KDE Connect][HowToInstall] : 
-5. [virt-manager][HowToInstall] : for run virtual machine  
+1. [scrcpy][HowToInstall] : android tablet remote control on PC
+2. [fcitx5][HowToInstall] : chweing and pinyin
+3. [KDE Connect][HowToInstall] : 
+4. [virt-manager][HowToInstall] : for run virtual machine  
     a. [windows on ssd setup][virt-windows-setup]
-7. [pavucontrol][HowToInstall] : audio control with UI
-8. [spicetify][spicetify-setup]
-9. [idescriptor][HowToInstall]: ios device manager
+5. [pavucontrol][HowToInstall] : audio control with UI
+6. [spicetify][spicetify-setup]
+7. [idescriptor][HowToInstall]: ios device manager
 
 # Settings
 1. [systemSetting][system-setup]
