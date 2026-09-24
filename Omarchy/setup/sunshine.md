@@ -32,7 +32,7 @@ esac
 1. Open Sunshine Web UI and go to the **Applications** tab.
 2. Click **Edit** next to **Desktop** (or create a new app profile named "Tablet Display").
 3. Add a **Prep Command**:
-* **Do Command:** `~/.config/sunshine/tablet_screen.sh do`
-* **Undo Command:** `~/.config/sunshine/tablet_screen.sh undo`
+* **Do Command:** `/home/xxxx/.config/sunshine/tablet_screen.sh do`
+* **Undo Command:** `home/xxxx/.config/sunshine/tablet_screen.sh undo`
 
 4. Save the application settings.
