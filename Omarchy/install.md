@@ -20,7 +20,7 @@
 5. [pavucontrol][HowToInstall] : audio control with UI
 6. [spicetify][spicetify-setup]
 7. [idescriptor][HowToInstall] : ios device manager
-8. [crow-translate][HowToInstall] : translate tool
+8. [translate-shell][translate-shell-setup] : translate tool
 
 # Settings
 1. [systemSetting][system-setup]
@@ -34,3 +34,4 @@
 [system-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/systemSetting.md
 [sunshine-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/sunshine.md
 [plugins-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/omarchy-plugins.md
+[translate-shell-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/translate-shell.md
