@@ -61,7 +61,7 @@ wait_for_enter_key(){
     while true; do
         read -r -s -n 1 key
 
-        if [[ "$key" == "s" || "$key" == "P" ]]; then
+        if [[ "$key" == "s" || "$key" == "S" ]]; then
             echo -en "\r[ Play Sound 🔈 ] "
             trans -b -p $_ENGINE "$_PLAY_SOUND_LANG" "$_TEXT" >/dev/null 2>&1 &
 
@@ -70,6 +70,7 @@ wait_for_enter_key(){
         fi
     done
 }
+
 if [ -n "$TEXT" ]; then
     case "$1" in
         play)
