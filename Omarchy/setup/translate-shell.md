@@ -81,7 +81,7 @@ wait_for_enter_key(){
 
             if [[ $_var ]]; then
                 _TEXT=$_var
-                clear
+                clear -x
                 translate;
             fi
         elif [[ "$key" == "l" ]]; then
