@@ -55,16 +55,41 @@ wait_for_enter_key(){
     _TEXT=$1
     _PLAY_SOUND_LANG=$2
     _ENGINE=$3
-    echo -e '\n'
-    echo "Press 's' to play sound, Enter or 'q' to quit:"
+    _TARGET_LANG=":zh-TW+en"
+
+    translate(){
+        RESULT=$(trans $_ENGINE "$_TARGET_LANG" "$_TEXT")
+        echo "$RESULT"
+        echo -e '\n'
+        echo "[[[ Press "
+        echo "    's' to play sound, 'i' to input, 'l' to chang language"
+        echo "    Enter or 'q' to quit ]]]"
+    }
+
+    translate;
+
 
     while true; do
         read -r -s -n 1 key
 
         if [[ "$key" == "s" || "$key" == "S" ]]; then
-            echo -en "\r[ Play Sound 🔈 ] "
+            echo -e -n "\r[ Play Sound 🔈 ] "
             trans -b -p $_ENGINE "$_PLAY_SOUND_LANG" "$_TEXT" >/dev/null 2>&1 &
+        elif [[ "$key" == "i" ]]; then
+            echo -e -n "\rEnter your text: "
+            read -r -p "" _var
 
+            if [[ $_var ]]; then
+                _TEXT=$_var
+                clear
+                translate;
+            fi
+        elif [[ "$key" == "l" ]]; then
+            echo -e -n "\rEnter your language command(ex. en:zh-TW): "
+            read -r -p "" _var
+            if [[ $_var ]]; then
+                _TARGET_LANG="$_var"
+            fi
         elif [[ "$key" == "" || "$key" == "q" ]]; then
             break
         fi
@@ -77,11 +102,9 @@ if [ -n "$TEXT" ]; then
             trans -b -p $ENGINE "$PLAY_SOUND_LANG" "$TEXT" >/dev/null 2>&1 &
         ;;
         pop)
-            RESULT=$(trans $ENGINE ":zh-TW+en" "$TEXT")
             # reference to /usr/share/omarchy/bin/omarchy-launch-floating-terminal-with-presentation
             export -f wait_for_enter_key
-            cmd="echo '$RESULT'; wait_for_enter_key '$TEXT' '$PLAY_SOUND_LANG' '$ENGINE'; "
-
+            cmd="wait_for_enter_key '$TEXT' '$PLAY_SOUND_LANG' '$ENGINE'; "
             exec setsid uwsm-app -- xdg-terminal-exec --app-id=org.omarchy.terminal --title=Omarchy -e bash -c "$cmd"
         ;;
         *)
@@ -90,6 +113,7 @@ if [ -n "$TEXT" ]; then
         ;;
     esac
 fi
+
 
 ```
 
