@@ -71,15 +71,18 @@ Add a keybinding to trigger the script on keypress.
 
 1. Open your Hyprland configuration file:
 
-   ```bash
-   nano ~/.config/hypr/hyprland.conf
-   ```
+```bash
+n ~/.config/hypr/bindings.lua
+```
 
 2. Add the following keybinding rule (binds `SUPER + SHIFT + T`):
 
 ```ini
 # Translation shortcut
-bind = SUPER SHIFT, T, exec, ~/.local/bin/trans-clip
+o.bind("CTRL + ALT + E", "translate-clip", "trans-clip")
+o.bind("CTRL + ALT + S", "translate-clip play sound", "trans-clip play")
+o.bind("CTRL + ALT + S", "translate-clip pop window", "trans-clip pop")
+
 ```
 
 3. Reload Hyprland or save the file to apply changes.
@@ -92,47 +95,4 @@ bind = SUPER SHIFT, T, exec, ~/.local/bin/trans-clip
 2. Press **`SUPER + SHIFT + T`**.
 3. A notification banner will appear with the translated text while the audio plays through your sound output.
 
----
-
-## 6. Advanced Customization & Terminal Usage
-
-### Changing Default Translation Engine (e.g., to DeepL or Bing)
-
-You can configure `translate-shell` to default to a different translation engine by creating a configuration file:
-
-1. Create configuration folder and file:
-
-```bash
-mkdir -p ~/.config/translate-shell
-nano ~/.config/translate-shell/init.trans
-```
-
-2. Set default options (e.g., DeepL engine and preferred target language):
-
-```init
-{
-:engine "deepl"
-:hl     "en"
-:tl     "es"
-}
-```
-
-### Quick Terminal Commands
-
-* **Basic translation:**
-```bash
-trans "Hello world"
-```
-* **Translate and play audio directly in terminal:**
-```bash
-trans -p :fr "Good morning"
-```
-* **Use Bing or DeepL directly:**
-```bash
-trans -e bing :de "Thank you very much"
-trans -e deepl :ja "Good evening"
-```
-* **Interactive translation session:**
-```bash
-trans -shell :es
-```
+-
