@@ -44,21 +44,50 @@ chmod +x ~/.local/bin/trans-clip
 ```bash
 #!/bin/bash
 
-# Target language code (e.g., :es for Spanish, :fr for French, :de for German, :zh for Chinese, :ja for Japanese)
 TARGET_LANG=":zh-TW"
 PLAY_SOUND_LANG=":en"
+ENGINE="-e google"
 
-# Grab primary selection (highlighted text) or fall back to copied clipboard text
 TEXT=$(wl-paste --primary 2>/dev/null)
 [ -z "$TEXT" ] && TEXT=$(wl-paste 2>/dev/null)
 
+wait_for_enter_key(){
+    _TEXT=$1
+    _PLAY_SOUND_LANG=$2
+    _ENGINE=$3
+    echo -e '\n'
+    echo "Press 's' to play sound, Enter or 'q' to quit:"
+
+    while true; do
+        read -r -s -n 1 key
+
+        if [[ "$key" == "s" || "$key" == "P" ]]; then
+            echo -en "\r[ Play Sound 🔈 ] "
+            trans -b -p $_ENGINE "$_PLAY_SOUND_LANG" "$_TEXT" >/dev/null 2>&1 &
+
+        elif [[ "$key" == "" || "$key" == "q" ]]; then
+            break
+        fi
+    done
+}
 if [ -n "$TEXT" ]; then
-    # Fetch translated text
-    RESULT=$(trans -brief "$TARGET_LANG" "$TEXT")
-    # Send desktop notification
-    notify-send -a "Translate" "Translation ($TARGET_LANG)" "$TEXT\n$RESULT"
-    # Play translation audio in background
-    trans -b -p "$PLAY_SOUND_LANG" "$TEXT" >/dev/null 2>&1 &
+    case "$1" in
+        play)
+            trans -b -p $ENGINE "$PLAY_SOUND_LANG" "$TEXT" >/dev/null 2>&1 &
+        ;;
+        pop)
+            RESULT=$(trans $ENGINE ":zh-TW+en" "$TEXT")
+            # reference to /usr/share/omarchy/bin/omarchy-launch-floating-terminal-with-presentation
+            export -f wait_for_enter_key
+            cmd="echo '$RESULT'; wait_for_enter_key '$TEXT' '$PLAY_SOUND_LANG' '$ENGINE'; "
+
+            exec setsid uwsm-app -- xdg-terminal-exec --app-id=org.omarchy.terminal --title=Omarchy -e bash -c "$cmd"
+        ;;
+        *)
+            RESULT=$(trans -brief $ENGINE "$TARGET_LANG" "$TEXT")
+            notify-send -a "Translate" "Translation ($TARGET_LANG)" "$TEXT\n$RESULT"
+        ;;
+    esac
 fi
 
 ```
@@ -81,7 +110,7 @@ n ~/.config/hypr/bindings.lua
 # Translation shortcut
 o.bind("CTRL + ALT + E", "translate-clip", "trans-clip")
 o.bind("CTRL + ALT + S", "translate-clip play sound", "trans-clip play")
-o.bind("CTRL + ALT + S", "translate-clip pop window", "trans-clip pop")
+o.bind("CTRL + ALT + T", "translate-clip pop window", "trans-clip pop")
 
 ```
 
