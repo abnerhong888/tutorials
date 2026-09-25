@@ -8,7 +8,7 @@
 6. vscode
 7. steam
 8. [sunshine][HowToInstall] : gaming remotely server  
-    a. [virtual-tablet-screen][sunshine-setup]: virtual tablet screen setup  
+    a. [virtual-tablet-screen][sunshine-setup] : virtual tablet screen setup  
 10. [lutris][lutris-setup] : wine container for gaming
 
 ## others
@@ -19,7 +19,8 @@
     a. [windows on ssd setup][virt-windows-setup]
 5. [pavucontrol][HowToInstall] : audio control with UI
 6. [spicetify][spicetify-setup]
-7. [idescriptor][HowToInstall]: ios device manager
+7. [idescriptor][HowToInstall] : ios device manager
+8. [crow-translate][HowToInstall] : translate tool
 
 # Settings
 1. [systemSetting][system-setup]
