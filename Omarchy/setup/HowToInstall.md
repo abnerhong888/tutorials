@@ -79,6 +79,7 @@ reference path : /usr/share/omarchy/default/hypr/bindings/media.lua
 | Mute | omarchy-audio-output-volume mute-toggle |
 | Prev | omarchy-shell media previous|
 | Next | omarchy-shell media next |
+| Launch Spotify | uwsm-app spotify |
 
 # JDownloader2
 ```bash
