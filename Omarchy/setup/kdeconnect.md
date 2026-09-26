@@ -5,20 +5,6 @@ sudo pacman -S kdeconnect
 yay -S hypr-kdeconnect-fix
 systemctl --user restart xdg-desktop-portal
 ```
-```bash
-n ~/.config/xdg-desktop-portal/portals.conf
-systemctl --user daemon-reload
-systemctl --user restart xdg-desktop-portal hypr-kdeconnect-portal.service
-```
-```conf
-[preferred]
-default=hyprland
-org.freedesktop.impl.portal.ScreenCast=hyprland
-org.freedesktop.impl.portal.Screenshot=hyprland
-org.freedesktop.impl.portal.GlobalShortcuts=hyprland
-org.freedesktop.impl.portal.RemoteDesktop=hypr-kdeconnect
-
-```
 ## if want to auto start
 ```bash
 n ~/.config/hypr/autostart.lua
