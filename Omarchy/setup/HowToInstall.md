@@ -80,6 +80,7 @@ reference path : /usr/share/omarchy/default/hypr/bindings/media.lua
 | Prev | omarchy-shell media previous|
 | Next | omarchy-shell media next |
 | Launch Spotify | uwsm-app spotify |
+| Kill Spotify | pkill spotify |
 
 # JDownloader2
 ```bash
