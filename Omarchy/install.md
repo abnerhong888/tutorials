@@ -21,7 +21,7 @@
 6. [spicetify][spicetify-setup]
 7. [idescriptor][HowToInstall] : ios device manager
 8. [translate-shell][translate-shell-setup] : translate tool
-9. [Jdownloader2][HowToInstall] : download tool
+9. [JDownloader2][HowToInstall] : download tool
 
 # Settings
 1. [systemSetting][system-setup]
