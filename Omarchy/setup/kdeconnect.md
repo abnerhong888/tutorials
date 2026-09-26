@@ -5,13 +5,6 @@ sudo pacman -S kdeconnect
 yay -S hypr-kdeconnect-fix
 systemctl --user restart xdg-desktop-portal
 ```
-## if want to auto start
-```bash
-n ~/.config/hypr/autostart.lua
-```
-```lua
-o.launch_on_start("gio launch /usr/share/applications/org.kde.kdeconnect.daemon.desktop")
-```
 
 ## kde command for iphone
 Plugin Settings -> Execute remote command  
