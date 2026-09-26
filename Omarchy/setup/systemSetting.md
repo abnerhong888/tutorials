@@ -69,6 +69,16 @@ nvim ~/.config/omarchy/extensions/omarchy-menu.jsonc
   },
 
 ```
+# nvim tab size
+```bash
+n ~/.config/nvim/lua/config/options.lua
+```
+```lua
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+```
+
 
 # How to Mount a Windows Drive (NTFS)
 
