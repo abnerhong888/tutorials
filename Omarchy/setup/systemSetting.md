@@ -80,7 +80,7 @@ nvim ~/.config/omarchy/extensions/omarchy-menu.jsonc
   },
   "personal.jdownloader": {
     "icon":"⬇️",
-    "label":"Jdownloader",
+    "label":"JDownloader",
     "action":"uwsm-app -- jdownloader"
   },
 
