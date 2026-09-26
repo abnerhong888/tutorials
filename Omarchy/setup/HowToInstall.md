@@ -73,3 +73,8 @@ systemctl --user restart xdg-desktop-portal
 yay -S jdownloader2
 ```
 
+# playerctrl
+```bash
+sudo pacman -S playerctl
+```
+
