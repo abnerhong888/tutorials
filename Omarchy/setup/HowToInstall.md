@@ -64,9 +64,9 @@ sudo pacman -S scrcpy android-toolssudo pacman -S scrcpy android-tools
 # kde connect
 ```bash
 sudo pacman -S kdeconnect
-sudo ufw allow 1714:1764/udp
-sudo ufw allow 1714:1764/tcp
-sudo ufw reload
+# fix hypr-land remote control issue
+yay -S hypr-kdeconnect-fix
+systemctl --user restart xdg-desktop-portal
 ```
 # JDownloader2
 ```bash
