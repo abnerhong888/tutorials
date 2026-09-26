@@ -67,6 +67,22 @@ nvim ~/.config/omarchy/extensions/omarchy-menu.jsonc
     "label":"LINE",
     "action":"uwsm-app -- lutris lutris:rungame/line"
   },
+  "personal.idescriptor": {
+    "icon":"📱",
+    "label":"iDescriptor",
+    "action":"uwsm-app -- idescriptor"
+  },
+  "personal.kdeConnect": {
+    "icon":"🎛️",
+    "label":"KDE Connect",
+    "action":"uwsm-app -- kdeconnect-app"
+  },
+  "personal.jdownloader": {
+    "icon":"⬇️",
+    "label":"Jdownloader",
+    "action":"uwsm-app -- jdownloader"
+  },
+
 
 ```
 # nvim tab size
