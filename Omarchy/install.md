@@ -14,7 +14,7 @@
 ## others
 1. [scrcpy][HowToInstall] : android tablet remote control on PC
 2. [fcitx5][HowToInstall] : chweing and pinyin
-3. [KDE Connect][HowToInstall] : 
+3. [KDE Connect][kdeconnect-setup] : 
 4. [virt-manager][HowToInstall] : for run virtual machine  
     a. [windows on ssd setup][virt-windows-setup]
 5. [pavucontrol][HowToInstall] : audio control with UI
@@ -36,3 +36,4 @@
 [sunshine-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/sunshine.md
 [plugins-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/omarchy-plugins.md
 [translate-shell-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/translate-shell.md
+[kdeconnect-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/kdeconnect.md
