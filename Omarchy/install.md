@@ -26,6 +26,7 @@
 # Settings
 1. [systemSetting][system-setup]
 2. [Plugins][plugins-setup]
+2. [keybindings][keybindings-setup]
 
 [HowToInstall]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/HowToInstall.md
 [spicetify-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/spicetify.md
@@ -35,5 +36,6 @@
 [system-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/systemSetting.md
 [sunshine-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/sunshine.md
 [plugins-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/omarchy-plugins.md
+[keybindings-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/keybindings.md
 [translate-shell-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/translate-shell.md
 [kdeconnect-setup]: https://github.com/abnerhong888/tutorials/blob/main/Omarchy/setup/kdeconnect.md
