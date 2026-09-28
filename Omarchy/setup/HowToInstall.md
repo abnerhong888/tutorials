@@ -68,5 +68,6 @@ yay -S jdownloader2
 ```
 # Youtube-music-cli
 ```bash
-yay -S youtube-music-cli-bin
+sudo pacman -S mpv yt-dlp
+curl -fsSL https://raw.githubusercontent.com/involvex/youtube-music-cli/main/scripts/install.sh | bash
 ```
