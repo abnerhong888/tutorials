@@ -68,5 +68,6 @@ yay -S jdownloader2
 ```
 # Youtube-music-cli
 ```bash
+sudo pacman -S mpv yt-dlp
 yay -S youtube-music-cli-bin
 ```
