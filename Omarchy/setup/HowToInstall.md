@@ -66,8 +66,3 @@ sudo pacman -S scrcpy android-toolssudo pacman -S scrcpy android-tools
 ```bash
 yay -S jdownloader2
 ```
-# Youtube-music-cli
-```bash
-sudo pacman -S mpv yt-dlp
-curl -fsSL https://raw.githubusercontent.com/involvex/youtube-music-cli/main/scripts/install.sh | bash
-```
