@@ -83,6 +83,16 @@ nvim ~/.config/omarchy/extensions/omarchy-menu.jsonc
     "label":"JDownloader",
     "action":"uwsm-app -- jdownloader"
   },
+  "personal.webcam": {
+    "icon":"📷",
+    "label":"Webcam",
+    "action":"mpv --demuxer-lavf-format=video4linux2 --demuxer-lavf-o-set=input_format=mjpeg,video_size=1920x1080 av://v4l2:/dev/video0 --profile=low-latency --untimed"
+  },
+  "personal.webcamFlip": {
+    "icon":"📷",
+    "label":"Webcam Flip",
+    "action":"mpv --demuxer-lavf-format=video4linux2 --demuxer-lavf-o-set=input_format=mjpeg,video_size=1920x1080 av://v4l2:/dev/video0 --profile=low-latency --untimed --vf=hflip"
+  },
 
 
 ```
